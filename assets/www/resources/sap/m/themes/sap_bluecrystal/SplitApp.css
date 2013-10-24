@@ -1,0 +1,64 @@
+/* ============================================= */
+/* CSS for control sap.m/SplitApp.control        */
+/* BlueCrystal theme                             */
+/* ============================================= */
+
+.sapMSplitAppMaster {
+	background-color: @sapUiSplitAppMasterBG;
+}
+
+/* separator line over the content of the master page */
+.sapMSplitAppMaster:not(.sapMSplitAppMasterVisible):after{
+	content: "";
+	position: absolute;
+	width: 0px;
+	right: 0px;
+	height: 100%;
+	bottom: 0;
+	border-right: 1px solid @sapUiLightBorder;
+	z-index: 5;
+}
+
+/* 4px border for the branding bar */
+.sapMSplitAppMaster:not(.sapMSplitAppMasterVisible):before{
+	content: "";
+	position: absolute;
+	width: 0px;
+	right: 0px;
+	height: 0.25rem;
+	top: 0;
+	border-right: 1px solid @sapUiBrand;
+	z-index: 6;
+}
+.sapMPopoverCont .sapMSplitAppMaster:not(.sapMSplitAppMasterVisible):before{
+	display: none; /* do not show in a popover */
+}
+@media (min-height: @sapMShellMinHeightForHeader) {
+	/* Shell draws its own branding bar */
+	.sap-desktop .sapMShell .sapMSplitAppMaster:not(.sapMSplitAppMasterVisible):before{
+		display: none;
+	}
+}
+
+/* footer separator has priority */
+.sapMSplitAppMaster footer {
+	z-index: 6;
+}
+
+.sapMPopoverCont .sapMSplitAppMaster:after{
+	/* popover has its own border, do not show separator */
+	display: none;
+}
+
+.sapMSplitAppStretchCompress > .sapMSplitAppMaster,
+.sapMSplitAppShowHide:not(.sapMSplitAppPortrait) > .sapMSplitAppMaster,
+.sapMSplitAppPopover:not(.sapMSplitAppPortrait) > .sapMSplitAppMaster {
+	border-radius: 0;
+}
+.sapMSplitAppPortrait.sapMSplitAppShowHide > .sapMSplitAppMaster {
+	box-shadow: @sapUiSplitAppMasterShadow;
+	border-right: @sapUiSplitAppMasterBorder;
+	-webkit-background-clip: padding-box;
+	-ms-background-clip: padding-box;
+	background-clip: padding-box;
+}

@@ -1,0 +1,9 @@
+.sapMRI .sapUiIcon,
+.sapMRI .sapMImg {
+	padding-right: @sapUiRIIconPadding;
+}
+
+.sapMRI .sapUiIcon:last-child,
+.sapMRI .sapMImg:last-child {
+	padding-right: 0rem;
+}

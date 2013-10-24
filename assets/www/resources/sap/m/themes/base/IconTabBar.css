@@ -1,0 +1,9 @@
+/* ============================================ */
+/* CSS for control sap.m/IconTabBar.control			*/
+/* ============================================ */
+
+.sapMITB {
+	display: block;
+	width: 100%;
+	position: relative;
+}

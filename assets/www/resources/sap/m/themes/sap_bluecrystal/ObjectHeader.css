@@ -1,0 +1,35 @@
+/* ============================================= */
+/* CSS for control sap.m/ObjectHeaderItem.control */
+/* ============================================= */
+
+.sapMOHIntro {
+
+	color: @sapUiLightText;
+}
+
+.sapMOHIntro.sapMOHIntroActive,
+.sapMOHTitle.sapMOHTitleActive {
+	color: @sapUiLink;
+}
+
+.sapMOHTitle {
+	
+	color: @sapUiDarkText;
+}
+
+.sapMOHNumber {
+	font-family: 'OpenSans-CondBold',sans-serif;
+	color: @sapUiDarkText;
+}
+
+.sapMOHNumberUnit {	
+	color: @sapUiStandardText;
+}
+	
+.sapMOH .sapMObjectAttributeDiv {
+	color: @sapUiLightText;
+}
+
+.sapMOH .sapMObjectAttributeActive{
+	color: @sapUiLink;
+}

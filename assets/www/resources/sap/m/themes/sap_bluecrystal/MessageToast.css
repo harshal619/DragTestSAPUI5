@@ -1,0 +1,22 @@
+/* =========================================================== */
+/* CSS for control sap.m/MessageTost.control BlueCrystal theme */
+/* =========================================================== */
+
+.sapMMT {
+	font-size: 0.875rem;
+	padding: 1rem;
+	background-color: @sapUiMessageToastBGFallback;
+	background: -webkit-linear-gradient(@sapUiMessageToastBG);
+	background: linear-gradient(@sapUiMessageToastBG);
+	background-repeat: no-repeat;
+	text-shadow: 0 0.0625rem @sapUiMessageToastTextShadow;
+	color: @sapUiMessageToastTextColor;
+	-webkit-box-shadow: 0 0.125rem 2.750rem 0.125rem fade(@sapUiShadowTint, 50%), 0 0.250rem 0.250rem 0 fade(@sapUiShadowTint, 15%);
+	box-shadow: 0 0.125rem 2.750rem 0.125rem fade(@sapUiShadowTint, 50%), 0 0.250rem 0.250rem 0 fade(@sapUiShadowTint, 15%);
+	border-radius: 0.1428571428571429rem;
+}
+
+.sap-android .sapMMT {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}

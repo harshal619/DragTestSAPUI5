@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>ColumnListItem</name>
+	<author>SAP AG</author>
+	<documentation>ColumnListItem can be used to create columns inside the List like Table.</documentation>
+	<since>1.12</since>
+	<baseType>ListItemBase</baseType>
+	<aggregations default="cells">
+		<aggregation name="_clonedHeaders" cardinality="0..n" type="sap.ui.core/Control" visibility="hidden">
+	    	<documentation>Internal aggregation to hold the cloned column headers for pop-in.</documentation>
+	    </aggregation>
+		<aggregation cardinality="0..n" name="cells" type="sap.ui.core/Control" bindable="bindable">
+			<documentation>Every item inside the cells aggregation defines one column of the row.</documentation>
+		</aggregation>
+	</aggregations>
+</control>

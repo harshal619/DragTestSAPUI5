@@ -1,0 +1,36 @@
+/* ============================================= */
+/* CSS for control sap.m/ActionListItem.control  */
+/* ============================================= */
+.sap-ios .sapMALI {
+	height: 2.75em;
+}
+
+.sap-android .sapMALI,.sap-bb .sapMALI {
+	height: 3em;
+}
+
+.sap-android .sapMALI > .sapMLIBContent,
+.sap-bb .sapMALI > .sapMLIBContent {
+	line-height: 3em;
+}
+
+.sap-ios .sapMALI > .sapMLIBContent {
+	line-height: 2.75em;
+}
+
+.sapMALIText {
+	text-shadow: 0 0.05em 0 lighten(@sapUiListBG, 15);
+}
+
+.sap-ios .sapMALIText {
+	font-weight: bold;
+	font-size: 1.0625em;
+	margin: 0 0 0 0.625rem;
+}
+
+.sap-android .sapMALIText,.sap-bb .sapMALIText {
+	font-weight: normal;
+	line-height: 1.14286em;
+	font-size: 1.125em;
+	margin: 0 0 0 0.5rem;
+}

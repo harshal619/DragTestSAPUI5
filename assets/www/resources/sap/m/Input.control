@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+
+	<name>Input</name>
+	<author>SAP AG</author>
+	<documentation>Enables users to input data. </documentation>
+	<baseType>sap.m/InputBase</baseType>
+	<properties>
+		<property group="Data" name="type" type="sap.m/InputType" defaultValue="Text">
+			<documentation>Type of input (e.g. Text, Number, Email, Phone)</documentation>
+		</property>
+		<property name="maxLength" type="sap.ui.core/int" defaultValue="0" group="Behavior">
+			<documentation>Maximum number of characters. Value '0' means the feature is switched off.</documentation>
+		</property>
+		<property group="Misc" name="valueStateText" type="sap.ui.core/string">
+			<documentation>The text which is shown in the value state message popup. If not specfied a default text is shown.</documentation>
+		</property>
+		<property group="Misc" name="showValueStateMessage" type="sap.ui.core/boolean" defaultValue="true">
+			<documentation>Whether the value state message should be shown.</documentation>
+		</property>
+		<property group="Misc" name="dateFormat" type="sap.ui.core/string" defaultValue="YYYY-MM-dd">
+			<documentation>Only used if type=date and no datepicker is available.
+The data is displayed and the user input is parsed according to this format.
+NOTE: The value property is always of the form RFC 3339 (YYYY-MM-dd).</documentation>
+			<deprecation since="1.9.1">sap.m.DateTimeInput should be used for date/time inputs and formating.</deprecation>
+		</property>
+	</properties>
+	<events>
+		<event name="liveChange">
+			<documentation>This event is fired when the value of the input is changed - e.g. at each keypress</documentation>
+			<parameters>
+				<parameter name="newValue" type="sap.ui.core/string">
+					<documentation>the new value of the input</documentation>
+				</parameter>
+			</parameters>
+		</event>
+	</events>
+</control>

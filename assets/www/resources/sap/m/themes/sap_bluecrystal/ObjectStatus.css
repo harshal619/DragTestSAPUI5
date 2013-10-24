@@ -1,0 +1,22 @@
+
+/* ============================================= */
+/* CSS for control sap.m/ObjectStatus.control */
+/* ============================================= */
+
+.sapMObjStatus {
+}
+
+.sapMObjStatusNone {
+}
+
+.sapMObjStatusError {
+	color: @sapUiNegativeText;		
+}
+
+.sapMObjStatusWarning {
+	color: @sapUiCriticalText;
+}
+
+.sapMObjStatusSuccess {
+	color: @sapUiPositiveText;
+}

@@ -1,0 +1,32 @@
+/* ============================================= */
+/* CSS for controlsap.m/DisplayListItem.control  */
+/* ============================================= */
+.sapMDLI {
+	height: 3rem;
+}
+
+.sapMDLI > .sapMLIBContent {
+	line-height: 3rem;
+}
+
+.sapMDLILabel {
+	font-size: 1.125rem;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	color: @sapUiLIText;
+}
+
+.sapMDLIValue {
+	font-size: 0.875em;
+	margin-left: 1rem;
+	text-align: right;
+	color: @sapUiLITextSec;
+}
+
+.sapMLIBActive .sapMDLILabel {
+	color: @sapUiLITextInverted;
+}
+
+.sapMLIBActive .sapMDLIValue {
+	color: @sapUiLITextInverted;
+}

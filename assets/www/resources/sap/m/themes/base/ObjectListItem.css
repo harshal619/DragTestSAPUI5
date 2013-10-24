@@ -1,0 +1,131 @@
+
+/* ============================================= */
+/* CSS base theme for control sap.m/ObjectListItem.control */
+/* ============================================= */
+
+.sapMObjLItem {
+	box-sizing: border-box;	
+	vertical-align: baseline;
+	padding: 1rem;
+}
+
+.sapMObjLTopRow {
+	float: left;
+	width: 100%
+}
+
+.sapMObjLIntro {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: .875rem;
+	margin-bottom: .563rem;
+}
+
+.sapMObjLIcon {
+	display: inline-block;
+	float: left;
+	margin-right: .75rem;
+}
+
+.sapMObjLTitle {
+	font-size: 1.125rem;
+	vertical-align: top;
+	max-height: 3rem;
+	overflow: hidden;
+}
+
+.sapMObjLNumberDiv {
+	float: right;
+}
+
+.sapMObjLNumber {		
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: right;
+	font-size: 1.75rem;
+	text-overflow: ellipsis;
+	margin-top: -.25rem;
+}
+
+.sapMObjLNumberUnit {
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: right;
+	font-size: 0.75rem;
+	margin-top: -.25rem;
+}
+
+.sapMObjLBottomRow {
+	margin-top: .25rem;
+}
+
+.sapMObjLAttrRow {
+	font-size: .875rem;	
+	padding-top: .313rem;
+}
+
+.sapMObjLAttrDiv {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 65%;
+	text-align: left;
+	vertical-align: top;	
+}
+
+.sapMObjLAttrDiv .sapMObjectAttributeDiv { 
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;	
+}
+
+
+/* First and second attributes get one line with ellipsis */
+.sapMObjLAttrRow:nth-child(1)>.sapMObjLAttrDiv .sapMObjectAttributeDiv,
+.sapMObjLAttrRow:nth-child(2)>.sapMObjLAttrDiv .sapMObjectAttributeDiv{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+} 
+
+.sapMObjLAttrDiv .sapMObjectAttributeDiv {
+	display: inline-block;
+}
+
+.sapMObjLStatusDiv {
+	box-sizing: border-box;
+	display: inline-block; 
+	width: 35%;
+	text-align: right;
+	vertical-align: top;
+}
+
+.sapMObjLAttrRow .sapMObjStatus {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 100%;
+}
+
+.sapMObjLBottomRow .sapMObjStatusIcon {
+	font-size: 1rem;
+}
+
+.sapMObjLItem .sapMLIBContent {
+	-webkit-box-flex: 1;
+}
+
+.sapMObjLListModeDiv {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-ms-flex-direction: row;
+	-ms-flex-align: center;
+}
+
+html[data-sap-ui-browser="ie10"] .sapMObjLItem .sapMLIBContent {
+	width: 100%;
+}

@@ -1,0 +1,26 @@
+
+/* ============================================= */
+/* CSS for control sap.m/Label.control */
+/* ============================================= */
+
+.sapMLabel {
+	color: @sapUiText;
+	font-size: @sapUiFontSize;
+	display: inline-block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	cursor: text;
+}
+
+.sapMLabelBold {
+	font-weight: bold;
+}
+
+.sap-desktop .sapMLIBCursor .sapMLabel,
+.sap-desktop .sapMLIBCursor + .sapMListTblSubRow .sapMLabel{
+	cursor: pointer;
+}

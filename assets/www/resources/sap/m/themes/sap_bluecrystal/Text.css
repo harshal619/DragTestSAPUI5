@@ -1,0 +1,27 @@
+/* ============================================= */
+/* CSS for control sap.m/Text.control            */
+/* BlueCrystal theme                             */
+/* ============================================= */
+
+
+.sapMText{
+	font-size: 			   0.875rem;
+	font-family: 		   @sapUiFontFamily;
+	line-height:		   normal;
+}
+
+.sapMLIBActive .sapMText,
+.sapMLIBActive .sapMListTblCell .sapMText,
+.sapMLIBActive .sapMListTblSubCntRow .sapMText{
+	color: @sapUiLITextInverted;
+}
+
+/* collapse lines in a read-only form */
+.sapUiForm:not(.sapUiFormEdit) .sapMText{
+	vertical-align: top; /* align vertically to labels */
+}
+
+.sapMLIBUnread .sapMText,
+.sapMLIBUnread + .sapMListTblSubRow .sapMText{
+	font-family: @sapUiFontFamilySecondary;
+}

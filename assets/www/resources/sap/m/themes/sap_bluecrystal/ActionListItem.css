@@ -1,0 +1,17 @@
+/* ============================================= */
+/* CSS for control sap.m/ActionListItem.control  */
+/* ============================================= */
+.sapMALI {
+	height: 3em;
+}
+
+.sapMALI > .sapMLIBContent {
+	line-height: 3em;
+}
+
+.sapMALIText {
+	font-weight: normal;
+	line-height: 1.14286em;
+	font-size: 1.125em;
+	margin: 0 0 0 0.5rem;
+}

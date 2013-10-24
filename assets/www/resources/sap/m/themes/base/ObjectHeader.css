@@ -1,0 +1,152 @@
+/* ============================================= */
+/* CSS for control sap.m/ObjectHeaderItem.control */
+/* ============================================= */
+
+.sapMOH {
+	margin: 2rem;
+}
+
+.sap-phone .sapMOH {
+	margin: 1rem;
+}
+
+.sapMDialog .sapMOH,
+.sapMPopover .sapMOH {
+	margin: 1rem;
+}
+
+.sapMOHIntro {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: .875rem;
+	margin-bottom: 1rem;
+}
+
+.sapMOHIntroActive,.sapMOHTitleActive {
+	color: @sapUiLink;
+	cursor: pointer;
+}
+
+.sapMOHTopRow {
+
+}
+
+.sapMOHTitleDiv {
+	box-sizing: border-box;
+	max-height: 6.3rem;
+	width: 65%;
+	overflow: hidden;
+	float: left;
+}
+
+.sapMOHTitleDivFull {
+	width: 100%;
+}
+
+.sapMOHTitleDiv.sapMOHNumberWrap {
+	max-height: 4.2rem;
+}
+
+.sap-phone .sapMOHTitleDiv {
+	max-height: 5rem;
+}
+
+.sap-phone .sapMOHTitleDiv.sapMOHNumberWrap {
+	max-height: 3.4rem;
+}
+
+.sapMOHIcon {
+	position: absolute;
+	width: 3rem;
+}
+
+.sapMOHTitle {
+	display: inline-block;
+	font-size: 1.5rem;
+}
+
+.sapMOHTitleIcon {
+	min-height: 3rem;
+}
+
+.sap-phone .sapMOHTitleIcon {
+	min-height: 2.5rem;
+}
+
+.sap-phone .sapMOHTitle {
+	font-size: 1.188rem;
+}
+
+.sapMOHIcon+.sapMOHTitle {
+	margin-left: 3.5rem;
+}
+
+.sapMOHNumberDiv {
+	display: inline-block;
+	float: right;
+	text-align: right;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.sapMOHNumberWrap {
+	width: 100%;
+}
+
+.sap-phone .sapMOHNumberWrap {
+	margin-top: .25rem;
+}
+
+.sapMOHNumber {
+	display: block;
+	font-size: 1.75rem;
+	margin-top: -.25rem;
+}
+
+.sapMOHNumberUnit {
+	display: block;
+	font-size: 0.75rem;
+	margin-top: -.25rem;
+}
+
+.sapMOHBottomRow {
+	margin-top: 1rem;
+	font-size: .875rem;
+}
+
+.sapMOHAttrRow {
+	margin-top: 0.625rem;
+}
+
+.sapMOHAttrRow:first-child {
+	margin-top: 0rem;
+}
+
+.sapMOHAttr {
+	box-sizing:border-box;
+	
+	display: inline-block;
+	width: 65%;
+	
+	text-align: left;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.sapMOH .sapMObjectAttributeDiv {
+	display: inline-block;
+	text-overflow: inherit;
+	white-space: inherit;	
+}
+
+.sapMOHStatus {
+	box-sizing:border-box;
+	
+	display: inline-block; 
+	width : 35%;
+	
+	text-align: right;
+	vertical-align: top;
+	overflow: hidden;
+}

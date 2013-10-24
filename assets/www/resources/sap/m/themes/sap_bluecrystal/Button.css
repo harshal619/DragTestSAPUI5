@@ -1,0 +1,462 @@
+/* ============================================= */
+/* CSS for control sap.m/Button.control          */
+/* BlueCrystal theme                             */
+/* ============================================= */
+
+.sapMBtn {
+	color: @sapUiBtnText;
+	font-family: @sapUiFontFamily;
+	font-size: 0.875rem;
+	border: none;
+	height: 3.0rem;
+	min-width: 3.0rem;
+	margin: 0;
+	padding: 0;
+}
+
+.sapMBtnPaddingLeft {
+	padding-left: 1.0rem;
+}
+
+.sapMBtnPaddingRight {
+	padding-right: 1.0rem;
+}
+
+.sapMBtn:active, .sapMBtn.sapMBtnActive {
+	background-color: @sapUiBtnBGActive;
+	color: @sapUiBtnTextActive;
+}
+
+.sapMBtn:focus {
+	outline: none;
+}
+
+.sapMBtnContent {
+	line-height: 3.0rem;
+}
+
+.sapMBtnContentSpan {
+	vertical-align: top;
+}
+
+.sapMBtnContent > span {
+	vertical-align: top;
+}
+
+.sapMBtnContent > img {
+	vertical-align: middle;
+	max-height: 3.0rem
+}
+
+.sapMBtnContent .sapUiIcon {
+	font-size: 1.375rem;
+	line-height: 3.0rem;
+	width: 3.0rem;
+	text-align: center;
+	margin: 0;
+}
+
+/* ---------------------------------------- */
+
+.sapMBtnDefault,
+.sapMBtnBack,
+.sapMBtnUp {
+	background-color: @sapUiBtnBGDefault;
+	color: @sapUiBtnText;
+	text-shadow: 0 .063rem 0 @sapUiBtnTextActive;
+	border: 1px solid @sapUiBtnBorderDefault;
+	vertical-align: top;
+}
+
+.sapMBtnDefault:active, .sapMBtnDefault.sapMBtnActive,
+.sapMBtnBack:active, .sapMBtnBack.sapMBtnActive,
+.sapMBtnUp:active, .sapMBtnUp.sapMBtnActive {
+	color: @sapUiBtnTextActive;
+	text-shadow: none;
+	border: 1px solid @sapUiBtnBGActive;
+}
+
+.sapMBtnDisabled, 
+.sapMBtnDisabled:active, .sapMBtnDisabled.sapMBtnActive,
+.sapMBtnBackDisabled, 
+.sapMBtnBackDisabled:active, .sapMBtnBackDisabled.sapMBtnActive,
+.sapMBtnUpDisabled, 
+.sapMBtnUpDisabled:active, .sapMBtnUpDisabled.sapMBtnActive {
+	background-color: @sapUiBtnBGDefault;
+	color: @sapUiBtnTextDisabled;
+	text-shadow: none;
+	border: 1px solid @sapUiBtnBorderDefault;
+	cursor: default;
+}
+
+.sapMBtnDefault .sapMBtnContent .sapUiIcon,
+.sapMBtnBack .sapMBtnContent .sapUiIcon,
+.sapMBtnUp .sapMBtnContent .sapUiIcon,
+.sapMBtnTransparent .sapMBtnContent .sapUiIcon {
+	font-size: 1.375rem;
+	line-height: 3.0rem;
+	color: @sapUiBtnIcon;
+	width: 3.0rem;
+	text-align: center;
+}
+
+.sapMBtnDefault:active .sapMBtnContent .sapUiIcon, .sapMBtnDefault.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBtnBack:active .sapMBtnContent .sapUiIcon, .sapMBtnBack.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBtnUp:active .sapMBtnContent .sapUiIcon, .sapMBtnUp.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBtnTransparent:active .sapMBtnContent .sapUiIcon, .sapMBtnTransparent.sapMBtnActive .sapMBtnContent .sapUiIcon {
+	font-size: 1.375rem;
+	line-height: 3.0rem;
+	color: @sapUiBtnTextActive;
+	width: 3.0rem;
+	text-align: center;
+}
+
+/* ---------------------------------------- */
+
+.sapMBtnAccept {
+	background-color: @sapUiBtnBGPositive;
+	color: @sapUiBtnTextActive;
+}
+
+.sapMBtnAccept .sapMBtnContent {
+	padding-top: 1px;
+}
+
+.sapMBtnAccept:active, .sapMBtnAccept.sapMBtnActive {
+	background-color: @sapUiBtnBGPositiveActive;
+}
+
+.sapMBtnAcceptDisabled,
+.sapMBtnAcceptDisabled:active {
+	background-color: @sapUiBtnBGPositiveDisabled;
+	color: @sapUiBtnTextActive;
+	border: none;
+	cursor: default;
+}
+
+/* ---------------------------------------- */
+
+.sapMBtnReject {
+	background-color: @sapUiBtnBGNegative;
+	color: @sapUiBtnTextActive;
+}
+
+.sapMBtnReject .sapMBtnContent {
+	padding-top: 1px;
+}
+
+.sapMBtnReject:active, .sapMBtnReject.sapMBtnActive {
+	background-color: @sapUiBtnBGNegativeActive;
+}
+
+.sapMBtnRejectDisabled,
+.sapMBtnRejectDisabled:active {
+	background-color: @sapUiBtnBGNegativeDisabled;
+	color: @sapUiBtnTextActive;
+	border: none;
+	cursor: default;
+}
+
+/* ---------------------------------------- */
+
+.sapMBtnEmphasized {
+	background-color: @sapUiBtnBGEmphasized;
+	color: @sapUiBtnTextActive;
+	border-radius: @sapUiBtnBaseRadius;
+}
+
+.sapMBtnEmphasized .sapMBtnContent {
+	padding-top: 1px;
+}
+
+.sapMBtnEmphasized:active, .sapMBtnEmphasized.sapMBtnActive {
+	background-color: @sapUiBtnBGEmphasizedActive;
+}
+
+.sapMBtnEmphasizedDisabled,
+.sapMBtnEmphasizedDisabled:active {
+	background-color: @sapUiBtnBGEmphasizedDisabled;
+	color: @sapUiBtnTextActive;
+	border: none;
+	cursor: default;
+}
+
+/* ---------------------------------------- */
+
+.sapMBtnTransparent {
+	background-color: @sapUiBtnBGTransparent;
+	color: @sapUiBtnTextLink;
+	text-shadow: none;
+}
+
+.sapMBtnTransparent .sapMBtnContent {
+	padding-top: 1px;
+}
+
+.sapMBtnTransparent:active, .sapMBtnTransparent.sapMBtnActive{
+	background-color: @sapUiBtnBGActive;
+}
+
+.sapMBtnTransparentDisabled, 
+.sapMBtnTransparentDisabled:active, .sapMBtnTransparentDisabled.sapMBtnActive {
+	background-color: @sapUiBtnBGTransparent;
+	color: @sapUiBtnTextLinkDisabled;
+	cursor: default;
+	border: none;
+}
+
+/* ---------------------------------------- */
+
+/* button border in a bar as a separator */
+.sapMBar-CTX .sapMBtn{
+	vertical-align: top;
+	border-style: solid;
+	border-width: 0 1px; /* vertical lines as separators */
+	border-color: @sapUiLightBorder;
+}
+
+/* separator between buttons in a bar */
+.sapMBar-CTX .sapMBtn:first-child,
+.sapMBar-CTX .sapMBtn + .sapMBtn{
+	border-left-width: 0; /* no left separator at the beginning and collapse borders between buttons */  
+}
+.sapMBar-CTX .sapMBtn:last-child{
+	border-right-width: 0; /* no right separator  at the end */
+}
+
+/* top part of the separator between buttons in the page header has branding color.. */  
+.sapMPageHeader.sapMBar-CTX .sapMBtn{
+	-webkit-border-image: -webkit-linear-gradient(@sapUiBrand 8.33%,@sapUiLightBorder 8.33%) 0 100%;
+	border-image: linear-gradient(@sapUiBrand 8.33%,@sapUiLightBorder 8.33%) 0 100%;
+}
+
+/* .. but not in a shell */
+@media (min-height: @sapMShellMinHeightForHeader) {
+	.sap-desktop .sapMShell .sapMPageHeader.sapMBar-CTX .sapMBtn{
+		-webkit-border-image: none;
+		border-image: none;
+	}
+}
+
+/* separator between buttons in a footer */
+.sapMFooter-CTX .sapMBtn{
+	/* border-width: 0 1px; */
+	border-color: darken(@sapUiBtnBorderDefault, 70%);
+}
+.sapMFooter-CTX.sapMBar-CTX .sapMBtn:first-child{
+	border-left-width: 1px; /* override normal bar */ 
+}
+.sapMFooter-CTX.sapMBar-CTX .sapMBtn:last-child{
+	border-right-width: 1px; /* override normal bar */  
+}
+.sapMFooter-CTX>.sapMBarLeft>.sapMBtn:first-child,
+.sapMFooter-CTX .sapMBtn + .sapMBtn{
+	border-left-width: 0;
+}
+.sapMFooter-CTX>.sapMBarRight>.sapMBtn:last-child{
+	border-right-width: 0;
+}
+
+/* background and text colors for different states */
+.sapMBar-CTX .sapMBtnDefault,
+.sapMBar-CTX .sapMBtnBack,
+.sapMBar-CTX .sapMBtnUp,
+.sapMBar-CTX .sapMBtnEmphasized,
+.sapMBar-CTX .sapMBtnTransparent,
+.sapMBar.sapMHeader-CTX .sapMBtnDefault,
+.sapMBar.sapMHeader-CTX .sapMBtnBack,
+.sapMBar.sapMHeader-CTX .sapMBtnUp,
+.sapMBar.sapMHeader-CTX .sapMBtnEmphasized,
+.sapMBar.sapMHeader-CTX .sapMBtnTransparent,
+.sapMBar.sapMFooter-CTX .sapMBtnDefault,
+.sapMBar.sapMFooter-CTX .sapMBtnBack,
+.sapMBar.sapMFooter-CTX .sapMBtnUp,
+.sapMBar.sapMFooter-CTX .sapMBtnEmphasized,
+.sapMBar.sapMFooter-CTX .sapMBtnTransparent {
+	background-color: @sapUiBtnBGTransparent;
+}
+
+.sapMBar-CTX .sapMBtnDefault,
+.sapMBar-CTX .sapMBtnBack,
+.sapMBar-CTX .sapMBtnUp,
+.sapMBar-CTX .sapMBtnEmphasized,
+.sapMBar-CTX .sapMBtnTransparent {
+	color: @sapUiBtnTextHeader;
+	text-shadow: 0 .063rem 0 @sapUiBtnTextShadowDefault;
+}
+
+.sapMBar.sapMHeader-CTX .sapMBtnDefault,
+.sapMBar.sapMHeader-CTX .sapMBtnBack,
+.sapMBar.sapMHeader-CTX .sapMBtnUp,
+.sapMBar.sapMHeader-CTX .sapMBtnEmphasized,
+.sapMBar.sapMHeader-CTX .sapMBtnTransparent {
+	color: @sapUiBtnTextHeader;
+	text-shadow: 0 .063rem 0 @sapUiBtnTextShadowDefault;
+}
+
+.sapMBar.sapMFooter-CTX .sapMBtnDefault,
+.sapMBar.sapMFooter-CTX .sapMBtnBack,
+.sapMBar.sapMFooter-CTX .sapMBtnUp,
+.sapMBar.sapMFooter-CTX .sapMBtnEmphasized,
+.sapMBar.sapMFooter-CTX .sapMBtnTransparent {
+	color: @sapUiBtnTextActive;
+	text-shadow: 0 .063rem 0 @sapUiBtnTextShadowFooter;
+}
+
+.sapMBar-CTX .sapMBtnDefault:active, .sapMBar-CTX .sapMBtnDefault.sapMBtnActive,
+.sapMBar-CTX .sapMBtnBack:active, .sapMBar-CTX .sapMBtnBack.sapMBtnActive,
+.sapMBar-CTX .sapMBtnUp:active, .sapMBar-CTX .sapMBtnUp.sapMBtnActive,
+.sapMBar-CTX .sapMBtnEmphasized:active, .sapMBar-CTX .sapMBtnEmphasized.sapMBtnActive,
+.sapMBar-CTX .sapMBtnTransparent:active, .sapMBar-CTX .sapMBtnTransparent.sapMBtnActive,
+.sapMBar.sapMHeader-CTX .sapMBtnDefault:active, .sapMBar.sapMHeader-CTX .sapMBtnDefault.sapMBtnActive,
+.sapMBar.sapMHeader-CTX .sapMBtnBack:active, .sapMBar.sapMHeader-CTX .sapMBtnBack.sapMBtnActive,
+.sapMBar.sapMHeader-CTX .sapMBtnUp:active, .sapMBar.sapMHeader-CTX .sapMBtnUp.sapMBtnActive,
+.sapMBar.sapMHeader-CTX .sapMBtnEmphasized:active, .sapMBar.sapMHeader-CTX .sapMBtnEmphasized.sapMBtnActive,
+.sapMBar.sapMHeader-CTX .sapMBtnTransparent:active, .sapMBar.sapMHeader-CTX .sapMBtnTransparent.sapMBtnActive,
+.sapMBar.sapMFooter-CTX .sapMBtnDefault:active, .sapMBar.sapMFooter-CTX .sapMBtnDefault.sapMBtnActive,
+.sapMBar.sapMFooter-CTX .sapMBtnBack:active, .sapMBar.sapMFooter-CTX .sapMBtnBack.sapMBtnActive,
+.sapMBar.sapMFooter-CTX .sapMBtnUp:active, .sapMBar.sapMFooter-CTX .sapMBtnUp.sapMBtnActive,
+.sapMBar.sapMFooter-CTX .sapMBtnEmphasized:active, .sapMBar.sapMFooter-CTX .sapMBtnEmphasized.sapMBtnActive,
+.sapMBar.sapMFooter-CTX .sapMBtnTransparent:active, .sapMBar.sapMFooter-CTX .sapMBtnTransparent.sapMBtnActive {
+	background-color: @sapUiBtnBGActive;
+	color: @sapUiBtnTextActive;
+	text-shadow: none;
+}
+
+.sapMBar-CTX .sapMBtnDefault:active .sapMBtnContent .sapUiIcon, .sapMBar-CTX .sapMBtnDefault.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar-CTX .sapMBtnBack:active .sapMBtnContent .sapUiIcon, .sapMBar-CTX .sapMBtnBack.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar-CTX .sapMBtnUp:active .sapMBtnContent .sapUiIcon, .sapMBar-CTX .sapMBtnUp.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar-CTX .sapMBtnEmphasized:active .sapMBtnContent .sapUiIcon, .sapMBar-CTX .sapMBtnEmphasized.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnDefault:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMHeader-CTX .sapMBtnDefault.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnBack:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMHeader-CTX .sapMBtnBack.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnUp:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMHeader-CTX .sapMBtnUp.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnEmphasized:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMHeader-CTX .sapMBtnEmphasized.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnTransparent:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMHeader-CTX .sapMBtnTransparent.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnDefault:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMFooter-CTX .sapMBtnDefault.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnBack:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMFooter-CTX .sapMBtnBack.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnEmphasized:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMFooter-CTX .sapMBtnEmphasized.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnUp:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMFooter-CTX .sapMBtnUp.sapMBtnActive .sapMBtnContent .sapUiIcon {
+	color: @sapUiBtnTextActive;
+	text-shadow: none;
+}
+
+.sapMBar-CTX .sapMBtnDefault .sapMBtnContent .sapUiIcon,
+.sapMBar-CTX .sapMBtnBack .sapMBtnContent .sapUiIcon,
+.sapMBar-CTX .sapMBtnUp .sapMBtnContent .sapUiIcon,
+.sapMBar-CTX .sapMBtnEmphasized .sapMBtnContent .sapUiIcon,
+.sapMBar-CTX .sapMBtnTransparent .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnDefault .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnBack .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnUp .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnEmphasized .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnTransparent .sapMBtnContent .sapUiIcon {
+	color: @sapUiBtnIconHeader;
+	text-shadow: 0 .063rem 0 @sapUiBtnTextShadowDefault;
+}
+
+.sapMBar.sapMFooter-CTX .sapMBtnDefault .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnBack .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnUp .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnEmphasized .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnTransparent .sapMBtnContent .sapUiIcon {
+	color: @sapUiBtnTextActive;
+	text-shadow: 0 .063rem 0 @sapUiBtnTextShadowFooter;
+}
+
+.sapMBar-CTX .sapMBtnDisabled,
+.sapMBar-CTX .sapMBtnBackDisabled,
+.sapMBar-CTX .sapMBtnUpDisabled,
+.sapMBar-CTX .sapMBtnEmphasizedDisabled,
+.sapMBar.sapMHeader-CTX .sapMBtnDisabled,
+.sapMBar.sapMHeader-CTX .sapMBtnBackDisabled,
+.sapMBar.sapMHeader-CTX .sapMBtnEmphasizedDisabled,
+.sapMBar.sapMHeader-CTX .sapMBtnUpDisabled {
+	background-color: @sapUiBtnBGTransparent;
+	color: @sapUiBtnTextHeaderDisabled;
+	text-shadow: none;
+	cursor: default;
+}
+
+.sapMBar.sapMFooter-CTX .sapMBtnDisabled,
+.sapMBar.sapMFooter-CTX .sapMBtnBackDisabled,
+.sapMBar.sapMFooter-CTX .sapMBtnEmphasizedDisabled,
+.sapMBar.sapMFooter-CTX .sapMBtnUpDisabled {
+	background-color: @sapUiBtnBGTransparent;
+	color: @sapUiBtnTextFooterDisabled;
+	text-shadow: none;
+}
+
+
+
+/* Button: Accept, Reject with semantic colors */
+.sapMBar-CTX .sapMBtnAccept,
+.sapMBar.sapMHeader-CTX .sapMBtnAccept,
+.sapMBar.sapMFooter-CTX .sapMBtnAccept {
+	background-color: @sapUiBtnBGPositive;
+}
+
+.sapMBar-CTX .sapMBtnReject,
+.sapMBar.sapMHeader-CTX .sapMBtnReject,
+.sapMBar.sapMFooter-CTX .sapMBtnReject {
+	background-color: @sapUiBtnBGNegative;
+}
+
+.sapMBar-CTX .sapMBtnAccept,
+.sapMBar-CTX .sapMBtnReject,
+.sapMBar.sapMHeader-CTX .sapMBtnAccept,
+.sapMBar.sapMHeader-CTX .sapMBtnReject,
+.sapMBar.sapMFooter-CTX .sapMBtnAccept,
+.sapMBar.sapMFooter-CTX .sapMBtnReject {
+	color: @sapUiBtnTextActive;
+}
+
+.sapMBar-CTX .sapMBtnAccept:active, .sapMBar-CTX .sapMBtnAccept.sapMBtnActive,
+.sapMBar.sapMHeader-CTX .sapMBtnAccept:active, .sapMBar.sapMHeader-CTX .sapMBtnAccept.sapMBtnActive,
+.sapMBar.sapMFooter-CTX .sapMBtnAccept:active, .sapMBar.sapMFooter-CTX .sapMBtnAccept.sapMBtnActive {
+	background-color: @sapUiBtnBGPositiveActive;
+}
+
+.sapMBar-CTX .sapMBtnReject:active, .sapMBar-CTX .sapMBtnReject.sapMBtnActive,
+.sapMBar.sapMHeader-CTX .sapMBtnReject:active, .sapMBar.sapMHeader-CTX .sapMBtnReject.sapMBtnActive,
+.sapMBar.sapMFooter-CTX .sapMBtnReject:active, .sapMBar.sapMFooter-CTX .sapMBtnReject.sapMBtnActive {
+	background-color: @sapUiBtnBGNegativeActive;
+}
+
+.sapMBar-CTX .sapMBtnAccept:active .sapMBtnContent .sapUiIcon, .sapMBar-CTX .sapMBtnAccept.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar-CTX .sapMBtnReject:active .sapMBtnContent .sapUiIcon, .sapMBar-CTX .sapMBtnReject.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnAccept:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMHeader-CTX .sapMBtnAccept.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnReject:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMHeader-CTX .sapMBtnReject.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnAccept:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMFooter-CTX .sapMBtnAccept.sapMBtnActive .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnReject:active .sapMBtnContent .sapUiIcon, .sapMBar.sapMFooter-CTX .sapMBtnReject.sapMBtnActive .sapMBtnContent .sapUiIcon {
+	color: @sapUiBtnTextActive;
+}
+
+.sapMBar-CTX .sapMBtnAccept .sapMBtnContent .sapUiIcon,
+.sapMBar-CTX .sapMBtnReject .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnAccept .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMHeader-CTX .sapMBtnReject .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnAccept .sapMBtnContent .sapUiIcon,
+.sapMBar.sapMFooter-CTX .sapMBtnReject .sapMBtnContent .sapUiIcon {
+	color: @sapUiBtnTextActive;
+}
+
+.sapMBar-CTX .sapMBtnAcceptDisabled,
+.sapMBar.sapMHeader-CTX .sapMBtnAcceptDisabled,
+.sapMBar.sapMFooter-CTX .sapMBtnAcceptDisabled {
+	background-color: @sapUiBtnBGPositiveDisabled;
+	color: @sapUiBtnTextActive;
+	border: none;
+	cursor: default;
+}
+
+.sapMBar-CTX .sapMBtnRejectDisabled,
+.sapMBar.sapMHeader-CTX .sapMBtnRejectDisabled,
+.sapMBar.sapMFooter-CTX .sapMBtnRejectDisabled {
+	background-color: @sapUiBtnBGNegativeDisabled;
+	color: @sapUiBtnTextActive;
+	border: none;
+	cursor: default;
+}
+
+
+

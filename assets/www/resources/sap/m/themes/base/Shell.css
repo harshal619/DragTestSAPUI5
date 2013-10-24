@@ -1,0 +1,212 @@
+
+/* ============================================= */
+/* CSS for control sap.m/Shell.control */
+/* ============================================= */
+
+@sapMShellAppWidthLimit: 1024px;
+@sapMShellAppWidthLimitBy2: @sapMShellAppWidthLimit / 2;
+
+@sapMShellAppHeight: 768px;
+@sapMShellHeaderHeight: 96px;
+@sapMShellMinHeightForHeader: @sapMShellAppHeight + @sapMShellHeaderHeight;
+
+@sapMShellContentBG: rgba(255,255,255,0.3);
+
+.sapMShell {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.sapMShellBrandingBar {
+	display: none;
+}
+
+
+.sapMShellBG {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.sapMShellHeader {
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 16px; /* must be px because of calculations further below */
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.sapMShellHeaderText {
+	display: none;
+	cursor: default;
+}
+
+.sapMShellLogo {
+	display: none;
+}
+
+.sapMShellLogoImgAligner {
+	display: none;
+}
+
+.sapMShellHeaderRight {
+	display: none;
+}
+
+.sapMShellContent {
+	box-sizing: border-box;
+	height: 100% !important; /* important because overwritten by SplitApp/App control */
+	width: 100%;
+	position: relative;
+}
+
+.sapMShellContent {
+	position: relative;
+	margin: 0 auto;
+}
+
+
+/* modifications for taller screens */
+
+@media (min-height: @sapMShellMinHeightForHeader) { /* 768px plus 96px for header */
+	.sap-desktop .sapMShellLogo {
+		position: static;
+		float: left;
+	
+		display: -webkit-flex;
+		display: flex;
+		height: 76px;
+		margin: 0.75em 1em 0.5em 1em;
+	}
+	html[data-sap-ui-browser^="ie"].sap-desktop .sapMShellLogo {
+		display: block;
+	}
+	html[data-sap-ui-browser^="ie"].sap-desktop .sapMShellLogoImgAligner {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: -0.25em;
+	}
+	html[data-sap-ui-browser^="ie"].sap-desktop .sapMShellLogoImg {
+		vertical-align: middle;
+		display: inline-block;
+	}
+	
+	.sap-desktop .sapMShellLogoImg {
+		margin: auto;
+		max-width: 120px;
+		max-height: 80px;
+	}
+	.sap-desktop .sapMShellAppWidthLimited .sapMShellLogo {
+		margin-left: 0;
+	}
+	
+	.sap-desktop .sapMShellHeader {
+		display: block;
+		position: relative;
+		height: 96px;
+		color: @sapUiDarkText;
+	}
+	
+	.sap-desktop .sapMShellHeaderText {
+		display: inline-block;
+		margin-top: 28px;
+		font-size: 1.75em;
+		font-weight: lighter;
+	}
+	
+	.sap-desktop .sapMShellHeaderRight {
+		display: inline-block;
+		float: right;
+		font-size: 0.875em;
+		margin-top: 30px;
+	}
+	
+	.sap-desktop .sapMShellHeaderRightText {
+		padding: 0.75em 0.57em; /* text size is 14px here... */
+	}
+	
+	.sap-desktop .sapMShellHeaderLogout {
+		cursor: pointer;
+		padding: 0.75em 0.57em; /* text size is 14px here... */
+	}
+	.sap-desktop .sapMShellHeaderLogout:hover {
+		/* TODO */
+	}
+	.sap-desktop .sapMShellHeaderLogout:focus {
+		outline: none;
+	}
+	.sap-desktop .sapMShellHeaderLogout:active {
+		background-color: @sapUiHighlight;
+		outline: none;
+	}
+	
+	.sap-desktop .sapMShellContent {
+		position: absolute;
+		top: 96px;
+		bottom: 0;
+		height: auto !important; /* important because overwritten by SplitApp/App control */
+	}
+}
+
+
+@media (min-height: 769px) and (max-width: 640px) { /* logo would appear above but the window is really slim */
+	.sap-desktop  .sapMShellLogo {
+		display: none;
+	}
+}
+
+
+/* modifications for wider screens */
+
+@media (min-width: @sapMShellAppWidthLimit) { 
+	
+	.sap-desktop .sapMShellAppWidthLimited .sapMShellHeader, 
+	.sap-desktop .sapMShellAppWidthLimited .sapMShellContent {
+		width: @sapMShellAppWidthLimit;
+		margin-left: -@sapMShellAppWidthLimitBy2; /* @sapMShellAppWidthLimit divided by 2 */
+		left: 50%;
+	}
+	
+	.sap-desktop .sapMShellAppWidthLimited .sapMShellContent {
+		background-color: @sapMShellContentBG;
+	}
+}
+
+@sapMShellAppWidthLimitPlusPadding: @sapMShellAppWidthLimit + 16px;
+@media (min-width: @sapMShellAppWidthLimit) {
+	.sap-desktop .sapMShellAppWidthLimited .sapMShellHeader {
+		padding: 0;
+	}
+}
+
+@media (min-width: 1280px) { 
+	.sap-desktop .sapMShellAppWidthLimited .sapMShellLogo {
+		position: absolute;
+		opacity: 1;
+		height: auto;
+		width: 100px;
+		text-align: center;
+		
+		display: block;
+		left: -130px;
+		top: 22px;
+		margin: 14px;
+	}
+	.sap-desktop .sapMShellAppWidthLimited .sapMShellLogoImg {
+		max-width: 100px;
+		max-height: 160px;
+	}
+	
+	html[data-sap-ui-browser^="ie"].sap-desktop .sapMShellAppWidthLimited .sapMShellLogoImgAligner {
+		display: none;
+	}
+}
+

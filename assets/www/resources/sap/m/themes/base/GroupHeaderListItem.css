@@ -1,0 +1,15 @@
+/* ============================================= */
+/* CSS for controlsap.m/GroupHeaderListItem		 */
+/* ============================================= */
+
+.sapMGHLI .sapMLIBSelectM,
+.sapMGHLI .sapMLIBSelectS,
+.sapMGHLI .sapMLIBSelectD,
+.sapMGHLI .sapMListTblSelCol{
+	display: none;
+}
+
+.sapMGHLI .sapMLIBUnread,
+.sapMGHLI .sapMListTblUnreadCol{
+	display: none;
+}

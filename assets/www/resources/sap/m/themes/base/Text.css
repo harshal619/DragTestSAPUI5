@@ -1,0 +1,29 @@
+.sapMText {
+	display: inline-block;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	white-space: pre-line;
+}
+
+.sapMTextNoWrap {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.sapMTextLineClamp {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+.sapMTextMaxLine {
+	overflow: hidden;
+}
+
+.sap-desktop .sapMLIBCursor .sapMText,
+.sap-desktop .sapMLIBCursor + .sapMListTblSubRow .sapMText{
+	cursor: pointer;
+}

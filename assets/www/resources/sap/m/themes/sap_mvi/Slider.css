@@ -1,0 +1,174 @@
+/* ============================================== */
+/* CSS for control sap.m/Slider.control MVI Theme */
+/* ============================================== */
+
+/* =========== */
+/* iOS Slider  */
+/* =========== */
+
+/* slider commons */
+
+.sap-ios .sapMSli,
+.sap-ios .sapMSliProgress {
+	height: 0.4375rem;
+	border-radius: 0.25rem;
+}
+
+/* slider container */
+
+.sap-ios .sapMSliCont {
+	height: 2.75rem;
+	padding: 1.156rem 0.75rem 0 0.75rem;
+}
+
+/* slider */
+
+.sap-ios .sapMSli {
+	background-image: -webkit-linear-gradient(top, darken(@sapUiElement, 30), lighten(@sapUiElement, 7) 50%, lighten(@sapUiElement, 15) 50%, lighten(@sapUiElement, 15) 95%, darken(@sapUiElement, 30));
+	background-image: linear-gradient(top, darken(@sapUiElement, 30), lighten(@sapUiElement, 7) 50%, lighten(@sapUiElement, 15) 50%, lighten(@sapUiElement, 15) 95%, darken(@sapUiElement, 30));
+}
+
+/* slider progress indicator */
+
+.sap-ios .sapMSliProgress {
+	background-image: -webkit-linear-gradient(top, darken(spin(@sapUiSelected, 16), 10), lighten(desaturate(spin(@sapUiSelected, 14), 24), 22) 50%, lighten(desaturate(spin(@sapUiSelected, 11), 13), 31) 95%, darken(spin(@sapUiSelected, 16), 10)),
+						-webkit-linear-gradient(top, darken(@sapUiElement, 30), lighten(@sapUiElement, 7) 50%, lighten(@sapUiElement, 15) 50%, lighten(@sapUiElement, 15) 95%, darken(@sapUiElement, 30));
+	background-image: linear-gradient(top, darken(spin(@sapUiSelected, 16), 10), lighten(desaturate(spin(@sapUiSelected, 14), 24), 22) 50%, lighten(desaturate(spin(@sapUiSelected, 11), 13), 31) 95%, darken(spin(@sapUiSelected, 16), 10)),
+						linear-gradient(top, darken(@sapUiElement, 30), lighten(@sapUiElement, 7) 50%, lighten(@sapUiElement, 15) 50%, lighten(@sapUiElement, 15) 95%, darken(@sapUiElement, 30));
+}
+
+/* slider handle */
+
+.sap-ios .sapMSliHandle {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-left: -0.75rem;
+	top: -0.5625rem;
+	background-image: -webkit-linear-gradient(top, darken(@sapUiElement, 20), @sapUiElement 50%, darken(@sapUiElement, 7));
+	background-image: linear-gradient(top, darken(@sapUiElement, 20), @sapUiElement 50%, darken(@sapUiElement, 7));
+	border-radius: 0.75rem;
+	box-shadow: 0 0.1rem 0.15rem darken(@sapUiElement, 34);
+	border: none;
+}
+
+/* slider disabled */
+
+.sap-ios .sapMSliDisabled {
+	opacity: 0.3;
+}
+
+/* list context */
+
+.sap-ios .sapMILI-CTX > .sapMSliCont {
+	right: -0.6875rem;
+}
+
+/* ============================== */
+/* Android and blackberry Slider  */
+/* ============================== */
+
+/* slider commons */
+
+.sap-android .sapMSli,
+.sap-bb .sapMSli,
+.sap-android .sapMSliProgress,
+.sap-bb .sapMSliProgress {
+	height: 0.1875rem;
+}
+
+/* slider container */
+
+.sap-android .sapMSliCont,
+.sap-bb .sapMSliCont {
+	height: 3rem;
+	padding: 1.406rem 1.09375rem 0 1.09375rem;
+}
+
+/* slider */
+
+.sap-android .sapMSli,
+.sap-bb .sapMSli {
+	background: @sapUiElement no-repeat;
+}
+
+/* slider progress indicator */
+
+.sap-android .sapMSliProgress,
+.sap-bb .sapMSliProgress {
+	background: lighten(spin(@sapUiSelected, 354), 4) no-repeat;
+}
+
+/* slider handle */
+
+.sap-android .sapMSliHandle,
+.sap-bb .sapMSliHandle {
+	margin-left: -0.9375rem;
+	top: -0.785rem;
+	height: 1.75rem;
+	width: 1.75rem;
+	border-radius: 0.875rem;
+	background-color: fade(lighten(desaturate(spin(@sapUiSelected, 355), 23), 17), 60%);
+	background-repeat: no-repeat;
+}
+
+/* slider handle inner */
+
+.sap-android .sapMSliHandleInner,
+.sap-bb .sapMSliHandleInner {
+	display: block;
+	position: absolute;
+	background: lighten(@sapUiSelected, 4) no-repeat;
+	top: 0.625rem;
+	left: 0.625rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 0.5rem;
+}
+
+/* slider pressed */
+
+.sap-android .sapMSliPressed:not(.sapMSliDisabled) > .sapMSliHandle,
+.sap-bb .sapMSliPressed:not(.sapMSliDisabled) > .sapMSliHandle {
+	top: -0.91rem;
+	border-radius: 1rem;
+	border: 0.125rem solid lighten(spin(@sapUiActive, 354), 4);
+	background-color: fade(lighten(desaturate(spin(@sapUiActive, 355), 23), 17), 60%);
+}
+
+/* the dot in the center of the handle pressed */
+
+.sap-android .sapMSliPressed:not(.sapMSliDisabled) .sapMSliHandleInner,
+.sap-bb .sapMSliPressed:not(.sapMSliDisabled) .sapMSliHandleInner {
+	top: 0.6875rem;
+	left: 0.6875rem;
+	width: 0.375rem;
+	height: 0.375rem;
+	border-radius: 0.375rem;
+}
+
+/* slider disabled */
+
+.sap-android .sapMSliDisabled,
+.sap-bb .sapMSliDisabled {
+	background: fade(@sapUiElement, 30%) no-repeat;
+}
+
+.sap-android .sapMSliDisabled .sapMSliProgress,
+.sap-bb .sapMSliDisabled .sapMSliProgress {
+	background: none;
+}
+
+.sap-android .sapMSliDisabled > .sapMSliHandle,
+.sap-bb .sapMSliDisabled > .sapMSliHandle {
+	background-color: fade(darken(@sapUiElement, 37), 30%);
+}
+
+.sap-android .sapMSliDisabled .sapMSliHandleInner,
+.sap-bb .sapMSliDisabled .sapMSliHandleInner {
+	background-color: lighten(desaturate(spin(@sapUiSelected, 355), 23), 17);
+	top: 0.78125rem;
+	left: 0.78125rem;
+	width: 0.20625rem;
+	height: 0.20625rem;
+	border-radius: 0.20625rem;
+}

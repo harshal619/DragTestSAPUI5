@@ -1,0 +1,50 @@
+/* ============================================= */
+/* CSS for control sap.m/BusyDialog.control      */
+/* BlueCrystal theme                             */
+/* ============================================= */
+
+.sapMDialogBLyInit {
+	opacity: 0.6;
+	background: @sapUiBlockLayerColor;
+}
+.sapMBusyDialog {
+	background: @sapUiWhite;
+	border: @sapUiPopupBorder;
+}
+.sapMBusyDialogSimple {
+	background: transparent;
+	border: none;
+}
+.sapMBusyDialog .sapMDialogTitle{
+	height: 3em;
+	line-height: 3em;
+	background: @sapUiBarBG;
+	color: @sapUiBarText;
+	text-shadow: 0em 0.0625em 0em fade(@sapUiTextInverted, 50%);
+	box-shadow: inset 0em -0.0625em @sapUiLightBorder;
+}
+.sapMBusyDialog .sapMBusyIndicator {
+	margin: 1em;
+}
+.sapMBusyDialogLabel {
+	margin-top: 1em;
+}
+footer.sapMBusyDialogFooter {
+	height: 3em;
+	color: @sapUiFooterText;
+	background-color: @sapUiFooterBG;
+	background-image: none;
+	-webkit-box-shadow: inset 0em 0.0625em fade(@sapUiExtraLightBorder,20%);
+	box-shadow: inset 0em 0.0625em fade(@sapUiExtraLightBorder,20%);
+	
+}
+.sapMBusyDialog .sapMDialogBtn {
+	color: white;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	font-size: 0.875rem;
+	line-height: 3.0rem;
+	border: none;
+}

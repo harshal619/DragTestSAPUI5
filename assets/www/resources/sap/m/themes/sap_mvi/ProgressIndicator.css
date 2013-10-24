@@ -1,0 +1,21 @@
+.sapMPIBar {
+	background: @sapUiBlue;
+}
+
+.sapMPIBarPositive {
+background: @sapUiGreen;
+}
+
+.sapMPIBarNegative {
+background: @sapUiRed;
+}
+
+.sapMPIBarCritical {
+background: @sapUiOrange;
+}
+
+
+.sapMPIText{
+	font-family: @sapUiFontFamily;
+	color: @sapUiText;
+}

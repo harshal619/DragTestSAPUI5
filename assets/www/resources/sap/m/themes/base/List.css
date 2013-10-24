@@ -1,0 +1,235 @@
+/* ============================================= */
+/* CSS for controlsap.m/List.control */
+/* ============================================= */
+.sapMList {
+	min-width: 150px;
+	position: relative;	/* This should not break the list but help swipe list content position calculation */
+}
+
+.sapMListUl {
+	list-style-type: none;
+}
+
+.sapMListTbl {
+	width : 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+	overflow : hidden;
+	min-width: 10em;
+}
+
+.sapMListTbl th,
+.sapMListTbl td {
+	overflow: hidden;
+}
+
+.sapMListTblCell {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+}
+
+.sapMListTblCellNoData {
+	text-align: center;
+}
+
+.sapMListTblHeaderNone {
+	height: 0;
+	border: 0;
+}
+
+.sapMListTblHeaderNone > th {
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;	
+}
+
+.sapMListTblHeaderNone > .sapMListTblCell > * {
+	display: none;
+}
+
+.sapMListTbl .sapMLabel {
+	word-wrap: normal;
+}
+
+.sapMListTblNone {
+	display: none;
+}
+
+.sapMListTblSelCol {
+	width: 3em;
+}
+
+.sapMListTblUnreadCol {
+	width: 1.74rem;
+}
+
+.sapMListTblSubCnt {
+	display: block;
+	width : 100%;
+}
+
+.sapMListTblSubCntRow {
+	display: block;
+	overflow : hidden;
+}
+
+.sapMListTblSubCntSpr,
+.sapMListTblSubCntHdr,
+.sapMListTblSubCntVal {
+	display: inline-block;
+}
+
+.sapMListTblSubCntValBlock{
+	display: block;
+}
+
+/* experimental responsive table approach */
+@media screen and (max-width: 1120px) {
+	.sapMListTblCell.sapMSize-xxlarge{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.sapMListTblCell.sapMSize-desktop{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.sapMListTblCell.sapMSize-xlarge{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.sapMListTblCell.sapMSize-large{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.sapMListTblCell.sapMSize-tablet{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.sapMListTblCell.sapMSize-medium{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.sapMListTblCell.sapMSize-small{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.sapMListTblCell.sapMSize-xsmall{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 240px) {
+	.sapMListTblCell.sapMSize-xxsmall,
+	.sapMListTblCell.sapMSize-phone{
+		display: none;
+	}
+}
+
+.sapMListInset {
+	overflow: hidden;
+}
+
+.sapMListInsetBG {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.sapMListSwp {
+	overflow: hidden;
+	position: absolute;
+	right: 0.5em;
+	z-index: 1;
+	opacity: 0;
+	pointer-events: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+}
+
+/* swipe animations */
+@-webkit-keyframes sapMListSwpInAnim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes sapMListSwpInAnim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes sapMListSwpOutAnim {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes sapMListSwpOutAnim {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.sapMListSwpInAnim {
+	-webkit-animation: sapMListSwpInAnim 0.2s ease-in forwards;
+	animation: sapMListSwpInAnim 0.2s ease-in forwards;
+}
+
+.sapMListSwpOutAnim {
+	-webkit-animation: sapMListSwpOutAnim 0.2s ease-in forwards;
+	animation: sapMListSwpOutAnim 0.2s ease-in forwards;
+}
+
+.sapMListNoData {
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	list-style-type: none;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	-ms-flex-align: center;
+	-ms-flex-pack: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	height:2.75em;
+}
+
+.sapMListShowSeparatorsAll{
+	/*class will be added for others, just a reminder*/	
+}
+
+.sapMListShowSeparatorsInner{
+	/*class will be added for others, just a reminder*/	
+}
+
+.sapMListShowSeparatorsNone{
+	/*class will be added for others, just a reminder*/	
+}

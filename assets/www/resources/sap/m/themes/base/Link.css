@@ -1,0 +1,37 @@
+
+/* ============================================= */
+/* CSS for control sap.m/Link.control */
+/* ============================================= */
+
+.sapMLnk {
+	color: @sapUiLink;
+	text-decoration: none;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.sapMLnk:active,
+.sapMLnk:focus {
+	color: @sapUiLinkActive;
+}
+.sapMLnk:visited {
+	color: @sapUiLinkVisited;
+}
+.sapMLnk:hover {
+	color: @sapUiLinkHover;
+}
+
+.sapMLnkDsbl,
+.sapMLnkDsbl:hover,
+.sapMLnkDsbl:active,
+.sapMLnkDsbl:focus,
+.sapMLnkDsbl:visited {
+	color: @sapUiTextDisabled;
+	cursor: default;
+}
+
+.sapUiInverted-CTX .sapUiLnk {
+	color: @sapUiLinkInverted;
+}

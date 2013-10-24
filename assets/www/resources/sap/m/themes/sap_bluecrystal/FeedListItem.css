@@ -1,0 +1,48 @@
+
+/* ============================================= */
+/* CSS for control sap.m/FeedListItem.control */
+/* ============================================= */
+
+.sapMLIBActive .sapMFeedListItem a, 
+.sapMLIBActive .sapMFeedListItem span{
+	color: @sapUiLITextInverted;
+}
+
+.sapMLIBActive .sapMFeedListItemTextText,
+.sapMLIBActive .sapMFeedListItemTextText>.sapMLnk,
+.sapMLIBActive .sapMFeedListItemTextText>.sapMLnk.sapMLnkDsbl{
+	color: @sapUiTextInverted;
+	text-decoration: none;
+}
+
+.sapMFeedListItemTextText>.sapMLnk.sapMLnkDsbl {
+	color: @sapUiText; 
+}
+
+.sapMFeedListItemTextText>.sapMLnk {
+	display: inline;
+}
+
+.sapMFeedListItemTextText>.sapMLnk.sapMLnkDsbl {
+	color: @sapUiText; 
+}
+
+.sap-desktop .sapMFeedListItemTextText>.sapMLnk.sapMLnkDsbl:hover {
+	color: @sapUiText; 
+}
+
+.sapMFeedListShowSeparatorsAll.sapMLIB {
+	border-bottom: 1px solid @sapUiLIBorder;
+}
+
+/* special rendering for browsers without flex support (IE9) */
+li.sapMLIB.sapMFeedListItemTitleDiv.sapMLIBNoFlex>.sapMLIBContent>.sapMLIBContentNF{
+	&{
+		table-layout: fixed;
+		width: 100%;
+	}
+	article.sapMFeedListItem{
+		display: table-cell;
+		overflow: hidden;
+	}
+}

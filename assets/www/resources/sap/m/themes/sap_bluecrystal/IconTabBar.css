@@ -1,0 +1,262 @@
+/* ============================================ */
+/* CSS for control sap.m/IconTabBar.control			*/
+/* ============================================ */
+
+/* Head Container */
+
+.sapMITBHead {
+	display: block;
+	height: 3rem;
+	margin: 2rem 2rem 1rem 2rem;
+	white-space: nowrap;
+}
+
+.sap-phone .sapMITBHead {
+	display: block;
+	height: 6rem;
+	width: 100%;
+	margin: 1rem;
+}
+
+/* Arrow */
+
+.sapMITBArrow {
+    position: absolute;
+	top: 3.65rem;
+	left: 0rem;
+	width: 0.750rem;
+	height: 0.750rem;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color: @sapUiWhite;
+	z-index:1;
+	border-top: 1px solid @sapUiDarkBorder;
+	border-left: 1px solid @sapUiDarkBorder;
+}
+
+.sap-phone .sapMITBArrow {
+	top: 6.65rem;
+}
+
+/* Content Container */
+
+.sapMITBContent {
+    position: relative;
+	padding: 1rem;
+	margin-top: 0.750rem;
+	border-top: 1px solid @sapUiDarkBorder;
+	border-bottom: 1px solid @sapUiDarkBorder;
+	background-color: @sapUiWhite;		
+}
+
+.sap-phone .sapMITBContent {
+	padding: 0;
+	padding-top: 0.125rem;
+}
+
+/* Tab Item */
+
+.sapMIT {
+	display: inline-block;
+	height: 3rem;
+	line-height: 3rem;
+	color: @sapUiDarkText;
+	vertical-align: top;
+}
+
+.sap-desktop .sapMIT, .sap-tablet .sapMIT {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.sap-phone .sapMIT {
+	height: 6rem;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	margin-right: 0.25rem;
+}
+
+.sapMITHighlight {
+	color: @sapUiTextInverted;
+	background-color: @sapUiHighlight;
+}
+
+.sapMITDisabled {
+	color: fade(@sapUiDarkText, 30%);
+}
+
+/* Tab Item Description */
+
+.sapMITDesc {
+	display: inline-block;
+	position: relative;
+	height: 3rem;
+	line-height: 3rem;
+	vertical-align: top;
+	font-size: 0.75rem;
+}
+
+.sap-phone .sapMITDesc {
+	width: 100%;
+}
+
+/* Tab Filter Item */
+
+.sap-desktop .sapMITFilter, .sap-tablet .sapMITFilter {
+	margin-left: 0.5rem;
+	padding-left: 0;
+}
+
+.sap-phone .sapMITFilter {
+	margin-left: 0.25rem;
+}
+
+.sap-phone .sapMITFilter:first-child {
+	margin-left: 0;
+}
+
+
+.sapMITFilter .sapMITText {
+	position: relative;
+	top: 0.75em;
+}
+
+.sap-phone .sapMITFilter .sapMITText {
+	display: inline-block;
+	width: 100%;
+	min-width: 2rem;
+	text-align: center;
+}
+
+.sapMITFilter .sapMITCount {
+	position: absolute;
+	top: -0.5em;
+}
+
+.sap-phone .sapMITFilter .sapMITCount {
+	width: 100%;
+	text-align: center;
+}
+
+.sapMITFilterIcon {
+	display: inline-block;
+	line-height: 2rem;
+	overflow: hidden;
+	font-size: 2rem;
+	padding: 0.5rem;
+}
+
+.sap-phone .sapMITFilterIcon {
+	display: block;
+}
+
+.sapMITHighlight .sapMITFilterIcon {
+	color: @sapUiIconInverted;
+}
+
+.sapMITFilterDefault {
+	color: @sapUiLightIcon;
+}
+
+.sapMITFilterPositive {
+	color: @sapUiPositiveIcon;
+}
+
+.sapMITFilterNegative {
+	color: @sapUiNegativeIcon;
+}
+
+.sapMITFilterCritical {
+	color: @sapUiCriticalIcon;
+}
+
+.sapMITDisabled .sapMITFilterDefault {
+	color: fade(@sapUiLightIcon, 30%);
+}
+
+.sapMITDisabled .sapMITFilterPositive {
+	color: fade(@sapUiPositiveIcon, 30%);
+}
+
+.sapMITDisabled .sapMITFilterNegative {
+	color: fade(@sapUiNegativeIcon, 30%);
+}
+
+.sapMITDisabled .sapMITFilterCritical {
+	color: fade(@sapUiCriticalIcon, 30%);
+}
+
+/* Tab Filter Show All Item */
+
+.sap-desktop .sapMITAll, .sap-tablet .sapMITAll {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.sapMITAll .sapMITCount {
+	vertical-align: middle;
+	font-size: 1.75rem;
+	margin-right: 0.5rem;
+	font-family: 'OpenSans-CondBold', sans-serif
+}
+
+.sap-phone .sapMITAll .sapMITCount {
+	display: block;
+	width: 100%;
+	min-width: 2rem;
+	margin-top: 0.25rem;
+	margin-left: 0;
+	text-align: center;
+}
+
+.sapMITAll .sapMITText {
+	vertical-align: middle;
+}
+
+.sap-phone .sapMITAll .sapMITText {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+/* Tab Separator Item */
+
+.sap-desktop .sapMITSep, .sap-tablet .sapMITSep {
+	padding: 0;
+	margin: 0;
+}
+
+.sap-phone .sapMITSep {
+	width: 0;
+}
+
+.sapMITSepLine {
+	width: 0;
+	border: 1px solid @sapUiDarkBorder;
+}
+
+.sap-phone .sapMITSepLine {
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+	padding: 0;
+}
+
+.sapMITSepIcon {
+	font-size: 1rem;
+	color: @sapUiLightIcon;
+}
+
+.sap-phone .sapMITSepIcon {
+	width: 0rem;
+	margin: 0;
+	position: relative;
+	left: -0.375rem;
+}
+
+
+

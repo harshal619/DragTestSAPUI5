@@ -1,0 +1,139 @@
+
+/* ============================================= */
+/* CSS for control sap.m/FeedListItem.control */
+/* ============================================= */
+
+.sapMFeedListItem{
+	display: block;
+}
+
+.sapMFeedListShowSeparatorsAll .sapMFeedListItem{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.sapMFeedListShowSeparatorsNone .sapMFeedListItem{
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+/*
+	Makes sure that floating image does not is not displayed in next
+	list item.
+*/
+.sapMFeedListItem:after {
+	content: " ";
+	display: block;
+	height: 0rem;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.sapMFeedListItem .sapMFeedListItemTextText a, .sapMFeedListItem .sapMFeedListItemTextText span{
+	font-family: 'OpenSans-Semibold', sans-serif;
+	line-height: 1.4;
+}
+
+/*
+ The following is necessary to make sure that image links 
+ do not show a border when run in IE.
+ */
+.sapMFeedListItemFigure a img {
+	border:0rem;
+}
+
+.sapMFeedListItemText{
+	color: @sapUiText;
+	vertical-align: top;
+	min-width: 15rem;
+	margin: 0rem;
+}
+
+.sap-tablet .sapMFeedListItemHasFigure, .sap-desktop .sapMFeedListItemHasFigure{
+	margin-left: 4.75rem;
+}
+
+.sapMFeedListItemTextText{
+	margin: 0rem;
+	font-size: 0.875rem;
+	line-height: 1.4;
+	color: @sapUiText;
+}
+
+
+.sapMFeedListItemFigure{
+	float: left;
+	height: 4rem;
+	overflow: hidden;
+	margin: 0rem;
+	color: @sapUiLink;
+}
+
+.sap-phone .sapMFeedListItemFigure {
+	display: none;
+}
+
+.sapMFeedListItemImage{
+	width: 4rem;
+	margin: 0rem;
+	color: @sapUiLink;
+}
+
+.sapMFeedListItemText > .collapsed {
+	height: 4rem;
+	overflow: hidden;
+}
+
+.sapMFeedListItemFooter {
+	margin-top: 0.25rem;
+	margin-bottom: 0rem;
+	line-height: auto;
+}
+
+.sapMFeedListItemTimestamp {
+	font-size: 0.75rem;
+	color: @sapUiLightText; 
+	line-height: auto;
+}
+
+.sapMFeedListItemInfo {
+	font-family: 'OpenSans-Semibold', sans-serif;
+	font-size: 0.75rem;
+	color: @sapUiLightText; 
+	line-height: auto;
+}
+
+.sapMFeedListItemInterpunct {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	font-family: 'OpenSans-Semibold', sans-serif;
+	font-size: 0.75rem;
+	color: @sapUiLightText; 
+	line-height: auto;
+}
+
+.sapMFeedListItemTitleDiv {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-ms-flex-direction: row;
+	-ms-flex-align: center;
+}
+
+.sapMFeedListShowSeparatorsNone.sapMLIB {
+	border-bottom: 0px;
+}
+
+html[data-sap-ui-browser="ie9"] .sapMFeedListItemTitleDiv {
+	display: block;
+}
+
+.sapMFeedListItemTitleDiv .sapMLIBContent {
+	width: 100%;
+	overflow: hidden;
+}
+
+
+

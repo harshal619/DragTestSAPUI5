@@ -1,0 +1,28 @@
+/* ========================================== */
+/* CSS for sap.m/MessageToast.class MVI Theme */
+/* ========================================== */
+
+/* =========== */
+/* Commons CSS */
+/* =========== */
+
+.sapMMT {
+	padding: 0.625em;
+	background-color: @sapUiBlackBG;
+	background: -webkit-gradient(linear, left top, left bottom, from(fade(lighten(@sapUiBlackBG, 20), 90)), to(lighten(@sapUiBlackBG, 20)));
+	background: -webkit-linear-gradient(fade(lighten(@sapUiBlackBG, 20), 90), lighten(@sapUiBlackBG, 20));
+	background: linear-gradient(fade(lighten(@sapUiBlackBG, 20), 90), lighten(@sapUiBlackBG, 20));
+	background-repeat: no-repeat;
+	text-shadow: 0 0.0625em @sapUiBlackBG;
+	color: @sapUiTextInverted;
+}
+
+/* ================= */
+/* iOS MessageToast  */
+/* ================= */
+
+.sap-ios .sapMMT {
+	border-radius: 0.3125em;
+	-webkit-box-shadow: 0 0.125em 2.750em 0.125em fade(@sapUiShadowTint, 50%), 0 0.250em 0.250em 0 fade(@sapUiShadowTint, 15%);
+	box-shadow: 0 0.125em 2.750em 0.125em fade(@sapUiShadowTint, 50%), 0 0.250em 0.250em 0 fade(@sapUiShadowTint, 15%);
+}

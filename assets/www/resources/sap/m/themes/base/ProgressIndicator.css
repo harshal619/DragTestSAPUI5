@@ -1,0 +1,54 @@
+
+/* ============================================= */
+/* CSS for control sap.m/ProgressIndicator.control */
+/* ============================================= */
+
+.sapMPI {
+	height: 2.5rem;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid @sapUiDarkBorder;
+	padding: 1px;
+	margin: 0.25rem 0;
+	background: white;
+}
+
+.sapMPIBar {
+	height: 2.25rem;
+	float: left;
+}
+
+.sapMPIBarDisabled {
+	opacity: 0.25;
+}
+
+.sapMPIText {
+	font-size: 0.75rem;
+	line-height: 2.25rem;
+	color: @sapUiLightText;
+}
+
+.sapMPITextLeft {
+	padding-right: 0.5rem;
+	float: right;
+	color: @sapUiTextInverted;
+	display: none;
+}
+
+.sapMPITextRight {
+	padding-left: 0.5rem;
+	float: left;
+	display:block;
+}
+
+.sapMPIValueGreaterHalf .sapMPITextRight {
+	display: none;
+}
+
+.sapMPIValueGreaterHalf .sapMPITextLeft {
+	display: block;
+}
+
+.sapMPIAnimate .sapMPIText {
+	display: none;
+}

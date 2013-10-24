@@ -1,0 +1,40 @@
+/* ============================================= */
+/* CSS for control sap.m/InputListItem.control   */
+/* ============================================= */
+.sapMILI {
+	-webkit-box-orient: horizontal;
+	-ms-flex-direction: row;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	height: 2.75em;
+}
+
+.sapMILILabel {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+}
+
+.sap-desktop .sapMLIBCursor .sapMILILabel {
+	cursor: pointer;
+}
+
+.sapMILI > .sapMLIBContent {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+}
+
+.sapMILIDiv {
+	-webkit-box-flex: 9999;
+	-ms-flex: 9999 0 auto;
+	text-align: right;
+}

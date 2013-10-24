@@ -1,0 +1,62 @@
+
+/* ============================================= */
+/* CSS blue crystal for control sap.m/ObjectListItem.control */
+/* ============================================= */
+
+.sapMObjLIntro {
+	color: @sapUiLightText;
+}
+
+.sapMObjLTitle {
+	color: @sapUiDarkText;
+}
+
+.sapMObjLTitle .sapMObjLIcon {
+	color: @sapUiLightText;
+}
+
+.sapMLIBActive .sapMObjLIcon {
+	color: @sapUiLITextInverted;
+}
+
+.sapMObjLNumber {
+	font-family: 'OpenSans-CondBold',sans-serif;
+	color: @sapUiDarkText;
+}
+
+.sapMObjLNumberUnit {
+	color: @sapUiStandardText;
+}
+
+.sapMObjLItem .sapMObjLAttrDiv {
+	color: @sapUiLightText;
+}
+
+.sapMObjLAdditAttribs {
+	color: @sapUiLightText;
+	
+}
+
+/* special rendering for browsers without flex support (IE9) */
+li.sapMLIB.sapMLIBNoFlex.sapMObjLItem>.sapMLIBContent>.sapMLIBContentNF{
+	&>div{
+		/* the outer container has 16px vertical padding */  
+		padding-top: 1rem; 
+		padding-bottom: 1rem;
+	} 
+	.sapMObjLIntro,
+	.sapMObjLAttrRow{
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	.sapMObjLAttrRow>div{
+		display: table-cell;
+	}
+	.sapMObjLIntro>span{
+		display: table-cell;
+   		overflow: hidden;
+   		text-overflow: ellipsis;
+   		white-space: nowrap;			
+	}
+}

@@ -1,0 +1,78 @@
+/* ============================================= */
+/* CSS for control sap.m/SplitApp.control */
+/* ============================================= */
+.sapMSplitApp {
+	background: darken(@sapUiDarkBG, 20); //#333
+}
+/**************************** 
+iOS specific styling 
+*****************************/
+.sap-ios {
+	 .sapMSplitAppPortrait.sapMSplitAppShowHide .sapMSplitAppMaster {
+		box-shadow: 0.0625em 0 0.625em fade(@sapUiShadowTint, 70);
+		-webkit-box-shadow: 0.0625em 0 0.625em fade(@sapUiShadowTint, 70);
+	}
+	.sapMSplitAppMaster {
+		border-right: 1px solid black;
+	}
+}
+/**************************** 
+Android specific styling 
+*****************************/
+.sap-android, .sap-bb {
+	.sapMSplitAppMaster {
+	 	background-color:  lighten(@sapUiBarBG,97);
+	}
+
+	.sapMPopover .sapMSplitAppMaster {
+		background-color: transparent;
+	}
+
+	.sapMSplitAppDetail {
+		box-shadow: -0.18em 0 0 darken(fade(@sapUiShadowTint, 10),20), -0.5em 0 1.2em darken(fade(@sapUiShadowTint, 8),20);
+		-webkit-box-shadow: -0.18em 0 0 darken(fade(@sapUiShadowTint, 10),20), -0.5em 0 1.2em darken(fade(@sapUiShadowTint, 8),20);
+	}
+
+	.sapMSplitAppMaster  {
+		.sapMPageBgStandard, .sapMPageBgList {
+			background-color:  lighten(@sapUiBarBG,97);
+		}
+	}
+
+	.sapMSplitAppMaster {
+	 	border-right: none;
+	 	box-shadow:  none;
+	}
+
+	.sapMSplitAppPortrait.sapMSplitAppShowHide .sapMSplitAppMaster {
+		display: inline-block;
+		z-index:0;
+		transform: none;
+		transition: none;
+		-webkit-transform: none;
+		-webkit-transition: none;
+	}
+
+	.sapMSplitAppPortrait.sapMSplitAppShowHide .sapMSplitAppMasterVisible {
+		animation-duration: 300ms;
+		animation-name: sapMSplitAppSlidein;	
+		-webkit-animation-duration: 300ms;
+		-webkit-animation-name: sapMSplitAppSlidein;	
+		box-shadow: none;
+		width:320px;
+		position: relative !important;
+	}
+
+	.sapMSplitAppPortrait.sapMSplitAppShowHide .sapMSplitAppMasterHidden {
+		animation-duration: 300ms;
+		animation-name: sapMSplitAppSlideout;
+		-webkit-animation-duration: 300ms;
+		-webkit-animation-name: sapMSplitAppSlideout;
+		width: 0px;
+		position: relative;
+	}
+
+	.sapMSplitAppPortrait.sapMSplitAppStretchCompress .sapMSplitAppMaster {
+		width: 250px;
+	}
+}

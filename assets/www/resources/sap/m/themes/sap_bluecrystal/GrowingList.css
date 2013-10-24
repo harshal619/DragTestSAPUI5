@@ -1,0 +1,38 @@
+/* ============================================= */
+/* CSS for control sap.m/GrowingList.control     */
+/* BlueCrystal theme                             */
+/* ============================================= */
+
+.sapMGrowingListTrigger,
+.sapMGrowingListLoading {
+	border-top: 0.0625em solid darken(@sapUiListBG,10)	;
+	height: 5.0rem;
+}
+
+.sapMGrowingListBusyIndicator {
+	margin: 1.5rem 1.0rem ;
+	position: absolute;
+}
+
+.sapMGrowingListLoading > .sapMGrowingListBusyIndicator {
+	margin: 0.5rem auto;
+	position: static;
+}
+
+.sapMGrowingListTitel {
+	padding: 0 4rem;
+}
+
+.sapMGrowingListDescription {
+	padding: 0 4rem;
+	text-align: center;
+}
+
+.sapMLIBActive .sapMSLITitle,
+.sapMLIBActive .sapMSLIDescription{
+	color: @sapUiLITextInverted;
+}
+
+.sapMGrowingListBusyIndicatorVisible .sapMBusySvg {  
+	stroke: @sapUiLITextInverted;
+}

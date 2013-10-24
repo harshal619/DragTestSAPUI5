@@ -1,0 +1,66 @@
+/* ============================================= */
+/* CSS for control sap.m/RadioButton.control     */
+/* BlueCrystal theme                             */
+/* ============================================= */
+.sapMRbB {
+	height: 2.875em;
+	width: 2.875em;
+	padding: 1px; /* using padding here so that margin won't collide */
+}
+
+.sapMRbBLabel {
+	line-height: 3rem;
+	height: 3rem;
+}
+
+.sapMRbB .sapMRbBOut {
+	height: 1em;
+	width: 1em;
+	border: 2px solid @sapUiRadioButtonBorderColor;
+	background-color: transparent;
+	margin-top: 0.8125em;
+	margin-left: 0.8125em;
+	padding: 1px; /* using padding here so that margin won't collide */
+}
+
+.sapMLIBActive .sapMRbB .sapMRbBOut{
+	border: 2px solid @sapUiLITextInverted;
+}
+
+.sapMRbBInn {
+	background-color: transparent;
+	-webkit-user-select: none;
+}
+
+.sapMRbB .sapMRbBInn {
+	height: 0.5em;
+	width: 0.5em;
+	padding: 1px; 
+	border-radius: 1em;
+	margin: 0.1875em;
+}
+
+/* IE cannot handle more than 2 decimal places, and therefore the radio button dot is misaligned when using em */
+html[data-sap-ui-browser^="ie"] .sapMRbB .sapMRbBInn {
+	margin: 3px;
+}
+
+.sapMRbSel .sapMRbBInn {
+	background-color: @sapUiRadioButtonSelectedColor;
+}
+
+.sapMLIBActive .sapMRbSel .sapMRbBInn,
+.sapMLIBActive .sapMRbDis .sapMRbBOut,
+.sapMLIBActive .sapMRbDis.sapMRbSel .sapMRbBInn{
+	background-color: @sapUiLITextInverted;
+}
+
+.sapMRbDis .sapMRbBOut {
+	background-color: none;
+	border: 2px solid fade(@sapUiRadioButtonBorderColor,25);
+}
+
+.sapMRbDis.sapMRbSel .sapMRbBInn {
+	background-color:fade(@sapUiRadioButtonSelectedColor,25);
+	border: none;
+}

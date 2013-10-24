@@ -1,0 +1,14 @@
+/* ============================================= */
+/* CSS for control sap.m/Input.control           */
+/* BlueCrystal theme                             */
+/* ============================================= */
+
+.sapMInput {}
+
+.sapMInputMessage {
+	color: @sapUiStandardText;
+	border-width:		   0px;
+	font-size: 			   0.750rem;
+	font-family: 		   @sapUiFontFamily;
+	padding:               0.3rem 0.625rem 0.3rem 0.625rem;
+}

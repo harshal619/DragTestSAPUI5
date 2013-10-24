@@ -1,0 +1,144 @@
+/* ============================================= */
+/* CSS for control sap.m/ActionSheet.control     */
+/* BlueCrystal theme                             */
+/* ============================================= */
+.sapMActionSheet button.sapMActionSheetButton > span.sapMBtnContent {
+	margin-left: 2rem;
+}
+
+.sapMActionSheet button.sapMActionSheetButton > .sapMBtnContent {
+	text-align: left;
+}
+
+/* ====== BEGIN ====== */
+/*Style for ActionSheet shown as a dialog sliding in from bottom*/
+/* ====== ====== ===== */
+.sapMDialog.sapMActionSheetDialog.sapMDialogPhone{
+	background-color: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border: none;
+}
+.sapMDialog.sapMActionSheetDialog.sapMDialogPhone > section{
+	border-radius: 0;
+	background-color: fade(@sapUiActionSheetBG, 98);
+}
+
+.sapMActionSheetDialogWithTitle.sapMActionSheetDialog.sapMDialogPhone > section {
+	box-shadow: 0px -20px 30px 2px fade(@sapUiBlockLayerColor, 15);
+	-webkit-box-shadow: 0px -20px 30px 2px fade(@sapUiBlockLayerColor, 15);
+}
+
+.sapMActionSheetDialog.sapMDialogPhone .sapMActionSheet button.sapMActionSheetButton {
+	width: 100%;
+	border-top: 1px solid fade(@sapUiActionSheetBorder, 20);
+	border-bottom: 0.0625rem solid fade(@sapUiActionSheetSeparator, 60);
+	height: 3rem;
+	color: @sapUiActionSheetButtonColor;
+	text-shadow: 0 -0.0625rem 0 fade(@sapUiShadowTint, 60);
+	box-sizing: border-box;
+	vertical-align: top;
+}
+
+.sapMActionSheetDialog.sapMDialogPhone .sapMActionSheet button.sapMActionSheetButton.sapMBtnAccept,
+.sapMActionSheetDialog.sapMDialogPhone .sapMActionSheet button.sapMActionSheetButton.sapMBtnReject{
+	border-bottom: none;
+} 
+
+.sapMActionSheetDialog.sapMDialogPhone .sapMActionSheet button.sapMActionSheetCancelButton:not(.sapMBtnActive) {
+	background: transparent;
+}
+
+.sapMActionSheetDialog.sapMDialogPhone .sapMActionSheet button.sapMActionSheetCancelButton {
+	box-shadow: none;
+	font-weight: normal;
+	border-radius: 0em;
+	vertical-align: top;
+}
+
+.sapMActionSheetDialog.sapMDialogPhone .sapMActionSheet > button.sapMActionSheetButton:last-child {
+	border-bottom: 0em;
+}
+
+.sapMActionSheetDialog.sapMDialogPhone > .sapMBar.sapMHeader-CTX{
+	background: transparent;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	color: @sapUiActionSheetButtonColor;
+	text-shadow: 0 -0.0625rem 0 fade(@sapUiShadowTint, 60);
+}
+
+.sapMActionSheetDialog.sapMDialogPhone > .sapMBar.sapMHeader-CTX > .sapMBarMiddle {
+	text-align: left;
+}
+
+.sapMActionSheetDialog.sapMDialogPhone > .sapMBar.sapMHeader-CTX > .sapMBarMiddle > .sapMBarPH > .sapMLabel{
+	color: @sapUiActionSheetButtonColor;
+	text-shadow: 0 -0.0625rem 0 fade(@sapUiShadowTint, 60);
+	font-size: 0.875rem;
+	margin: 0 1rem 0 1rem;
+}
+/* ====== END ====== */
+/*Style for ActionSheet shown as a dialog sliding in from bottom*/
+/* ====== ====== ===== */
+
+
+/* ====== BEGIN ====== */
+/*Style for ActionSheet shown as a Popover*/
+/* ====== ====== ===== */
+.sapMActionSheetPopover.sapMPopover {
+	background-color: fade(@sapUiActionSheetBG, 98);
+}
+
+.sapMActionSheetPopover.sapMPopover > .sapMPopoverArrDown:after {
+	border-top-color: fade(@sapUiActionSheetBG, 98);
+}
+
+.sapMActionSheetPopover.sapMPopover > .sapMPopoverArrUp:after {
+	border-bottom-color: fade(@sapUiActionSheetBG, 98);
+}
+
+.sapMActionSheetPopover.sapMPopover > .sapMPopoverArrLeft:after {
+	border-right-color: fade(@sapUiActionSheetBG, 98);
+}
+
+.sapMActionSheetPopover.sapMPopover > .sapMPopoverArrRight:after {
+	border-left-color: fade(@sapUiActionSheetBG, 98);
+}
+
+.sapMActionSheetPopover.sapMPopover .sapMActionSheet button.sapMActionSheetButton {
+	display: block;
+	width: 100%;
+	border-top: 0.0625rem solid fade(@sapUiActionSheetBorder, 20);
+	border-bottom: 0.0625rem solid fade(@sapUiActionSheetSeparator, 60);
+	height: 3rem;
+	color: @sapUiActionSheetButtonColor;
+	text-shadow: 0 -0.0625rem 0 fade(@sapUiShadowTint, 60);
+	box-sizing: border-box;
+	vertical-align: top;
+}
+
+.sapMActionSheetPopover.sapMPopover .sapMActionSheet button.sapMActionSheetButton.sapMBtnTransparent .sapUiIcon{
+	color: @sapUiBtnTextActive;
+	text-shadow: none;
+}
+
+.sapMActionSheetPopover.sapMPopover .sapMActionSheet button.sapMActionSheetButton.sapMBtnAccept,
+.sapMActionSheetPopover.sapMPopover .sapMActionSheet button.sapMActionSheetButton.sapMBtnReject{
+	border-bottom: none;
+} 
+
+.sapMActionSheetPopover.sapMPopover .sapMActionSheet button.sapMActionSheetButton:first-child{
+	border-top: none;
+}
+
+.sapMActionSheetPopover.sapMPopover .sapMActionSheet button.sapMActionSheetButton:last-child{
+	border-bottom: none;
+}
+
+.sapMActionSheetPopover.sapMPopover .sapMActionSheet{
+}
+/* ====== END ====== */
+/*Style for ActionSheet shown as a Popover*/
+/* ====== ====== ===== */

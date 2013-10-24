@@ -1,0 +1,177 @@
+/* ============================================= */
+/* CSS for control sap.m/SplitApp.control */
+/* ============================================= */
+.sapMSplitApp {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+.sapMSplitAppMaster {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 320px;
+	float: left;
+	left: 0;
+}
+
+.sapMSplitAppMaster > .sapMSplitAppMasterBlindLayer {
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	display: none;
+}
+
+.sapMSplitAppPortrait.sapMSplitAppShowHide > .sapMSplitAppMaster > .sapMSplitAppMasterBlindLayer{
+	display: block;
+}
+
+.sapMSplitAppDetail {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 100%;
+}
+/****************************************
+Default Master Animation Behavior
+*****************************************/
+	.sapMSplitAppStretchCompress > .sapMSplitAppMaster,
+	.sapMSplitAppShowHide:not(.sapMSplitAppPortrait) > .sapMSplitAppMaster,
+	.sapMSplitAppPopover:not(.sapMSplitAppPortrait) > .sapMSplitAppMaster {
+		border-radius: 0.3125em;
+	}
+	
+	.sapMSplitAppPortrait.sapMSplitAppShowHide > .sapMSplitAppMaster {
+		display: inline-block;
+		position: absolute;
+		transform: translate3d(-330px,0,0);
+		transition: all 0ms;
+		-webkit-transform: translate3d(-330px,0,0);
+		-webkit-transition: all 0ms;
+		z-index: 5;
+		top: 0;
+		height: 100%;
+		border-right: none;
+	}
+	
+	html[data-sap-ui-browser^="ie9"] .sapMSplitAppPortrait.sapMSplitAppShowHide > .sapMSplitAppMaster {
+		left: -320px;
+	}
+	
+	.sapMSplitAppPopover > .sapMPopoverCont > .sapMPopoverScroll > .sapMSplitAppMaster {
+		border-right: none;
+	}
+	
+	.sapMSplitAppPortrait.sapMSplitAppShowHide > .sapMSplitAppDetail,
+	.sapMSplitAppPopover .sapMSplitAppDetail {
+		margin-left: 0;
+	}
+	
+	.sapMSplitAppPortrait.sapMSplitAppShowHide > .sapMSplitAppMasterVisible {
+		transform: translate3d(0,0,0);
+		transition: all 300ms;
+		-webkit-transform: translate3d(0,0,0);
+		-webkit-transition: all 300ms;
+	}
+	
+	.sapMSplitAppPortrait.sapMSplitAppShowHide > .sapMSplitAppMasterHidden {
+		transform: translate3d(-330px,0,0);
+		transition: all 300ms;
+		-webkit-transform: translate3d(-330px,0,0);
+		-webkit-transition: all 300ms;
+	}
+	
+	.sapMSplitAppPortrait.sapMSplitAppStretchCompress > .sapMSplitAppMaster {
+		width: 320px !important;
+		left: 0;
+	}
+/****************************************
+Keyframe Animations
+*****************************************/
+@-webkit-keyframes sapMSplitAppSlidein {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 320px;
+	}
+}
+
+@-webkit-keyframes sapMSplitAppSlideout {
+	from {
+		width: 320px;
+	}
+	to {
+		width: 0px;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0.7; }
+}
+
+/* MS */
+@keyframes sapMSplitAppSlideout {
+	from {
+		width: 320px;
+	}
+	to {
+		width: 0px;
+	}
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0.7; }
+}
+
+.sapMSplitAppPortrait .sapMSplitAppMasterBtnShow {
+	display: block;
+	animation: fadeIn 300ms;
+	-webkit-animation: fadeIn 300ms;
+}
+
+.sapMSplitAppPortrait .sapMSplitAppMasterBtnHide {
+	animation: fadeOut 150ms;
+	-webkit-animation: fadeOut 150ms;
+}
+
+.sapMSplitAppMasterBtnShow {
+	display: block;
+	animation: fadeIn 1ms;
+	-webkit-animation: fadeIn 1ms;
+}
+
+.sapMSplitAppMasterBtnHide {
+	animation: fadeOut 5ms;
+	-webkit-animation: fadeOut 5ms;
+}
+
+.sapMSplitAppMasterBtnHidden {
+	display: none;
+}
+
+.sapMSplitAppMobile {
+	width: 100%;
+	height: 100%;
+}
+
+.sapMSplitApp > .sapMSplitAppDetail .sapMSplitAppHiddenChild {
+	display: none;
+}

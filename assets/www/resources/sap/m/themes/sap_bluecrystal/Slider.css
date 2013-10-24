@@ -1,0 +1,56 @@
+/* ====================================================== */
+/* CSS for control sap.m/Slider.control BlueCrystal theme */
+/* ====================================================== */
+
+/* slider container */
+
+.sapMSliCont {
+	height: 3rem;
+	padding: 1.406rem 1rem 0 1rem;
+}
+
+/* slider */
+
+.sapMSli {
+	background-color: @sapUiSliderBG;
+}
+
+.sapMSli,
+.sapMSliProgress {
+	height: 0.1875rem;
+}
+
+/* slider progress bar */
+
+.sapMSliProgress {
+	background-color: @sapUiSliderProgressBG;
+}
+
+/* slider handle */
+
+.sapMSliHandle {
+	margin-left: -1rem;
+	top: -0.91rem;
+	height: 1.75rem;
+	width: 1.75rem;
+	border-radius: 1rem;
+	background-color: @sapUiSliderHandleBG;
+	border: 0.125rem solid @sapUiSliderHandleBorder;
+}
+
+/* slider pressed */
+
+.sapMSliPressed:not(.sapMSliDisabled) > .sapMSliHandle {
+	background-color: @sapUiSliderHandleBGPressed;
+	border: 0.125rem solid @sapUiSliderHandleBorderPressed;
+}
+
+/* slider disabled */
+
+.sapMSliContDisabled {
+	opacity: 0.3;
+}
+
+.sapMSliDisabled .sapMSliProgress {
+	background: none;
+}

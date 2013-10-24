@@ -1,0 +1,55 @@
+/* ===================================== */
+/* CSS for control sap.m/Switch.control  */
+/* ===================================== */
+
+.sapMSwtCont {
+	display: inline-block;
+}
+
+.sapMSwtCont:not(.sapMSwtContDisabled) {
+	cursor: pointer;
+}
+
+.sapMSwtCont > input {
+	display: none;
+}
+
+.sapMSwtContDisabled {
+	pointer-events: none;
+}
+
+.sapMSwt {
+	position: relative;
+}
+
+.sapMSwtInner {
+	width: 100%;
+	height: 100%;
+}
+
+.sapMSwtText,
+.sapMSwtHandle,
+.sapMSwtInner {
+	position: absolute;
+}
+
+.sapMSwtText {
+	text-align: center;
+}
+
+.sapMSwtText > span {
+	white-space: nowrap;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.sapMSwtHandle {
+	display: block;
+}
+
+.sapMSwtAcceptReject .sapMSwtTextOn > span::before,
+.sapMSwtAcceptReject .sapMSwtTextOff > span::before {
+	font-family: 'SAP-icons';
+	speak: none;
+}

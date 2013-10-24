@@ -1,0 +1,123 @@
+
+/* ============================================= */
+/* CSS for controlsap.m/Popover.control */
+/* ============================================= */
+
+.sapMPopover{
+	position: absolute;
+	color: @sapUiText;
+	min-width: 100px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;
+	max-width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+}
+
+.sapMPopoverCont{
+	overflow: hidden;
+	position: relative;
+	/* set margin to every side */
+	margin: 0.4375em;
+	background-color: @sapUiLightBG;
+}
+
+.sapMPopoverScroll{
+/* 	width: 100%;  when set width to 100%, the horizontal scrolling will be disabled and this is done in the end of setArrowPosition method*/
+	display: inline-block;
+	overflow: hidden; 
+}
+
+/* disable scrolling automatically for sap.m.Page sap.m.NavContainer sap.m.ScrollingContainer inside Popover */
+.sapMPopoverScrollDisabled{
+	height: 100%;
+}
+
+.sapMPopoverCont:focus{
+	outline: none;
+}
+
+.sapMPopover.sapMPopoverTransparent {
+	opacity: 0;
+}
+
+.sapMPopover.sapMPopoverOpaque {
+	opacity: 1;
+}
+
+.sapMPopoverAnimation {
+ 	-webkit-transition: opacity 0.2s linear; 
+ 	transition: opacity 0.2s linear;
+}
+
+/* marker for Popover with a bar */
+.sapMPopoverWithBar{
+	
+}
+
+/* marker for Popover without a bar */
+.sapMPopoverWithoutBar{
+	
+}
+
+/* marker for Popover with NavContainer which includes pages inside */
+.sapMPopoverNav{
+	
+}
+/* marker for Popover with footer*/
+.sapMPopoverWithFooter{
+	
+}
+
+/* disable margin according to the header and footer availability */
+.sapMPopoverWithBar.sapMPopoverWithFooter > .sapMPopoverCont {
+	margin-bottom: 0;
+	margin-top: 0;	
+}
+/* disable margin according to the header and footer availability */
+.sapMPopoverWithoutBar.sapMPopoverWithFooter > .sapMPopoverCont {
+	margin-bottom: 0;
+}
+/* disable margin according to the header and footer availability */
+.sapMPopoverWithBar.sapMPopoverWithoutFooter > .sapMPopoverCont {
+	margin-top: 0;
+}
+
+.sapMPopoverWithoutBar.sapMPopoverNav > .sapMPopoverCont,
+.sapMPopoverWithoutBar.sapMPopoverPage > .sapMPopoverCont,
+.sapMActionSheetPopover > .sapMPopoverCont{
+	margin: 0;
+	background-color: transparent;
+}
+
+.sapMPopover > .sapMBar{
+	position: relative;
+	width: auto;
+}
+
+.sapMPopoverWithoutBar.sapMPopoverNav .sapMPopoverCont .sapMPage{
+	background-color: transparent;
+}
+
+.sapMPopover > .sapMPopoverCont .sapMPage > section {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: auto;
+}
+
+.sapMPopoverWithoutBar .sapMPopoverCont .sapMPage > section{
+/* 	padding: 0 0.4375em 0.625em 0.4375em; */
+	left: 0.4375em;
+	right: 0.4375em;
+}
+
+.sapMPopover:not(.sapMPopoverWithFooter) .sapMPopoverCont .sapMPage:not(.sapMPageWithFooter) > section { 
+/* .sapMPopoverWithoutBar .sapMPopoverCont .sapMPage:not(.sapMPageWithFooter) > section */
+/* 	padding-bottom: 0; */
+	bottom: 0.625em;
+}
+
+.sapMPopoverWithoutBar .sapMPage footer.sapMBar{
+	position: absolute;
+}

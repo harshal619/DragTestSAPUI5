@@ -1,0 +1,12 @@
+
+/* ============================================= */
+/* CSS for control sap.m/ObjectAttribute.control */
+/* ============================================= */
+
+.sapMObjectAttributeDiv {
+	font-size: .875rem;
+}
+
+.sapMObjectAttributeActive{
+	cursor: pointer;
+}

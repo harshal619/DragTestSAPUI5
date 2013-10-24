@@ -1,0 +1,54 @@
+/* ============================================= */
+/* CSS for control sap.m/Label.control           */
+/* BlueCrystal theme                             */
+/* ============================================= */
+.sapMLabel{
+	color: @sapUiLabelText;
+	font-size: 0.875rem;
+	font-family: @sapUiLabelFont;
+}
+
+.sapMLabel.sapMLabelBold{
+	font-family: @sapUiFontFamilySemibold;
+}
+
+.sapMLabelRequired:before{
+	content:"*";
+	color: @sapUiHighlight;
+	font-size: 1rem;
+}
+
+.sapMBar-CTX .sapMLabel{
+	color: @sapUiBarHeading;
+}
+
+.sapMBar-CTX.sapMFooter-CTX .sapMLabel {
+	font-size: 0.875rem;
+	color: darken(@sapUiFooterText, 15%);
+}
+
+.sapMBar-CTX.sapMPageHeader .sapMLabel,
+.sapMDialog-CTX .sapMBar-CTX .sapMLabel {
+	font-size: 1rem;
+}
+
+.sapMLIBActive .sapMLabel,
+.sapMLIBActive .sapMListTblCell .sapMLabel,
+.sapMLIBActive .sapMListTblSubCntRow .sapMLabel{
+	color: @sapUiLITextInverted;
+}
+
+/* collapse lines in a form */
+.sapUiForm .sapMLabel{
+	height: auto;
+	vertical-align: top; /* align vertically to multiline texts */
+}
+/* stand alone labels in a form should be semi-bold */
+.sapMLabel.sapUiFormLabel-CTX{
+	font-family: @sapUiFontFamilySemibold;
+}
+
+.sapMLIBUnread .sapMLabel,
+.sapMLIBUnread + .sapMListTblSubRow .sapMLabel{
+	font-family: @sapUiFontFamilySecondary;
+}

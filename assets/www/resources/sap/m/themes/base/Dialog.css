@@ -1,0 +1,142 @@
+/* ============================================= */
+/* CSS for control sap.m/Dialog.control */
+/* ============================================= */
+.sapMDialog{
+	position: absolute;
+	background-clip: padding-box;
+	box-sizing: border-box;
+	-webkit-animation-duration: 0.1s;
+	-webkit-animation-timing-function: ease-in;
+	animation-duration: 0.1s;
+	animation-timing-function: ease-in;
+}
+
+.sapMDialog > .sapMBar{
+	position: relative;
+	width: auto;
+}
+
+.sapMDialog > section{
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.sapMDialogScroll{
+	display: inline-block; /*this is for horizontal scrolling enablement*/
+	min-height: 100%;
+	width : 100%;
+}
+
+.sapMDialogHidden {
+/* 	display: none; */
+/* 	visibility need to be used instead of display none, because some control inside dialog may need to do calculation */
+	visibility: hidden;
+}
+
+.sapMDialogSliding {
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+
+.sapMDialogBlockLayer {
+	opacity: 0.6;
+}
+
+.sapMDialogTransparent {
+	opacity: 0;
+}
+
+.sapMDialog .sapMDialogActions {
+	display: -webkit-box;
+	display: -ms-flexbox;
+}
+
+.sapMDialog-CTX .sapMDialogActions > .sapMDialogAction {
+	-webkit-box-flex: 1;
+	width: 0;
+	-ms-flex: 1 0 0px;
+}
+
+html[data-sap-ui-browser^="ie9"] .sapMDialog-CTX .sapMDialogActions > .sapMDialogAction {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.sapMDialog  .sapMDialogScrollCont {
+/* 	by default no padding */
+	padding: 1rem;
+/* 	padding: 0.75em 0.4375em 0.75em 0.4375em; */
+}
+
+.sapMActionSheetDialog .sapMDialogScrollCont {
+	padding: 0; /*no content padding for action sheet*/
+}
+.sapMDialog.sapMMessageDialog .sapMDialogScrollCont{
+/* 	need padding for message Dialog */
+	padding: 0.4375em;
+}
+ 
+@-webkit-keyframes sapMDialogZoomIn {
+  0% {
+	-webkit-transform: scale3d(0.9,0.9,1);
+	transform: scale3d(0.9,0.9,1);
+	opacity: 0;
+  }
+  100% {
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+	opacity: 1;
+  }
+}
+
+@-webkit-keyframes sapMDialogZoomOut {
+  0% {
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+	opacity: 1;
+  }
+  100% {
+	-webkit-transform: scale3d(0.9,0.9,1);
+	transform: scale3d(0.9,0.9,1);
+	opacity: 0;
+  }
+}
+
+@keyframes sapMDialogZoomIn {
+  from {
+	transform: scale3d(0.9,0.9,1);
+	opacity: 0;
+  }
+  to {
+	transform: scale3d(1,1,1);
+	opacity: 1;
+  }
+}
+
+@keyframes sapMDialogZoomOut {
+  from {
+	transform: scale3d(1,1,1);
+	opacity: 1;
+  }
+  to {
+	transform: scale3d(0.9,0.9,1);
+	opacity: 0;
+  }
+}
+
+.sapMDialogOpening{
+	-webkit-animation-name: sapMDialogZoomIn;
+	animation-name: sapMDialogZoomIn;
+}
+
+.sapMDialogClosing {
+	-webkit-animation-name: sapMDialogZoomOut;
+	animation-name: sapMDialogZoomOut;
+}
+
+.sapMDialogBlockLayerAnimation {
+	position: absolute;
+	-webkit-transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
+}

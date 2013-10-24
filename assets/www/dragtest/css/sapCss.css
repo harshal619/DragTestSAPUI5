@@ -1,0 +1,64 @@
+@CHARSET "ISO-8859-1";
+
+.sapMSplitAppMaster {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+width: 0px;
+float: left;
+left: 0;
+}
+.sap-tablet #content {
+    width:100%;
+    background-color: #aeaeae;
+	position:fixed;
+    float:left;
+    max-height:100%;
+}
+.sap-phone #content {
+    width:100%;
+    background-color: #aeaeae;
+	position:fixed;
+    float:left;
+    max-height:100%;
+
+            }
+
+.sap-tablet #menu{
+	width: 70mm;
+    height: 100%;
+    position:fixed;
+    
+	background-color: #696969;
+	color:#696969;
+}
+.sap-phone #menu {
+    width: 250px;
+    height: 100%;
+    position:fixed;
+    
+	background-color: #696969;
+	color:#696969;
+}
+
+.sap-tablet #notificationScreen {
+    width: 70mm;
+    height: 100%;
+    position:fixed;
+    right:0;
+    
+    background-color: #696969;
+	color:#ffffff;
+		
+}
+
+.sap-phone #notificationScreen {
+    width: 250%;
+    height: 100%;
+    position:fixed;
+    right:0;
+    
+    background-color: #696969;
+	color:#ffffff;
+	
+}
+

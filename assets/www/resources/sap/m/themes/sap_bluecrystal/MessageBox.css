@@ -1,0 +1,42 @@
+/* ============================================= */
+/* CSS for control sap.m/MessageBox.js in Blue Crystal Theme */
+/* ============================================= */
+.sapMDialog.sapMMessageBoxInfo > header.sapMBar > .sapMBarMiddle > .sapMBarPH > .sapMDialogIcon.sapUiIcon {
+	color: @sapUiLightIcon;
+}
+
+.sapMDialog.sapMMessageBoxWarning > header.sapMBar > .sapMBarMiddle > .sapMBarPH > .sapMDialogIcon.sapUiIcon {
+	color: @sapUiCriticalText;
+}
+
+.sapMDialog.sapMMessageBoxError > header.sapMBar > .sapMBarMiddle > .sapMBarPH > .sapMDialogIcon.sapUiIcon {
+	color: @sapUiNegativeText;
+}
+
+.sapMDialog.sapMMessageBoxSuccess > header.sapMBar > .sapMBarMiddle > .sapMBarPH > .sapMDialogIcon.sapUiIcon {
+	color: @sapUiPositiveText;
+}
+
+.sapMDialog.sapMMessageBoxQuestion > header.sapMBar > .sapMBarMiddle > .sapMBarPH > .sapMDialogIcon.sapUiIcon {
+	color: @sapUiLightIcon;
+}
+
+.sapMDialog.sapMMessageBoxInfo > header.sapMBar > .sapMBarMiddle > .sapMBarPH > .sapMDialogTitle.sapMLabel {
+	color: @sapUiLightText;
+}
+
+.sapMDialog.sapMMessageBoxWarning > header.sapMBar > .sapMBarMiddle > .sapMBarPH > .sapMDialogTitle.sapMLabel {
+	color: @sapUiCriticalText;
+}
+
+.sapMDialog.sapMMessageBoxError > header.sapMBar > .sapMBarMiddle > .sapMBarPH > .sapMDialogTitle.sapMLabel {
+	color: @sapUiNegativeText;
+}
+
+.sapMDialog.sapMMessageBoxSuccess > header.sapMBar > .sapMBarMiddle > .sapMBarPH > .sapMDialogTitle.sapMLabel {
+	color: @sapUiPositiveText;
+}
+
+.sapMDialog.sapMMessageBoxQuestion > header.sapMBar > .sapMBarMiddle > .sapMBarPH > .sapMDialogTitle.sapMLabel {
+	color: @sapUiLightText;
+}

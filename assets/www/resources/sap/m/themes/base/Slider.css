@@ -1,0 +1,47 @@
+/* ======================================= */
+/* CSS for control sap.m/Slider.control    */
+/* ======================================= */
+
+/* ===================== */
+/* [ALL] Slider commons  */
+/* ===================== */
+
+.sapMSliCont {
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.sapMSliCont:not(.sapMSliContDisabled) {
+	cursor: pointer;
+}
+
+.sapMSliContDisabled,
+.sapMSliHandleInner {
+	pointer-events: none;
+}
+
+.sapMSli {
+	width: 100%;
+	position: relative;
+	background-repeat: no-repeat;
+}
+
+.sapMSliProgress,
+.sapMSliHandle,
+.sapMSliHandleInner {
+	position: absolute;
+}
+
+.sapMSliHandle {
+	display: block;
+}
+
+.sapMSliHandle:focus {
+	outline: none;
+}
+
+.sapMSliCont > input.sapMSliInput {
+	display: none;
+}

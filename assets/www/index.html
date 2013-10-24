@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.makit,sap.m"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_mvi" theme -->
+
+        <script type="text/javascript" src="myLib/jquery.pep.js"></script>
+
+		<script>
+				sap.ui.localResources("dragtest");
+				
+				// Tell UI5 where to find application content
+				// sap.ui.localResources("view");
+		        jQuery.sap.registerModulePath('Application', 'Application');
+
+		     	// Launch application
+		        jQuery.sap.require("Application");
+		        var oApp = new Application({root : "content"});
+
+				var notifychk=false;
+				var menuchk=false;
+				
+				
+				
+		</script>
+
+<style type="text/css">
+	    
+	    @import 'dragtest/css/sapCss.css';
+    </style>
+
+	</head>
+	
+	
+	
+	<body class="sapUiBody">
+		<div id="menu"></div>
+		<div id="notificationScreen"></div>
+		<div id="content">
+		</div>
+	</body>
+</html>

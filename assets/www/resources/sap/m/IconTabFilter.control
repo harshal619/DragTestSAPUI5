@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>IconTabFilter</name>
+	<author>SAP AG</author>
+	<documentation>The filter item class</documentation>
+
+	<baseType>sap.ui.core/Item</baseType>
+	<interfaces>
+		<interface>IconTab</interface>
+	</interfaces>
+	<properties>
+		<property group="Data" name="count" type="string" defaultValue="">
+			<documentation>The number of available items if this filter is applied</documentation>
+		</property>
+		<property group="Misc" name="showAll" type="boolean" defaultValue="false">
+			<documentation>Enables special visualiation for disabled filter (show all items)</documentation>
+		</property>
+		<property group="Misc" name="icon" type="URI" defaultValue="">
+			<documentation>The icon to display for this item.</documentation>
+		</property>
+		<property group="Appearance" name="iconColor" type="sap.ui.core/IconColor" defaultValue="Default">
+			<documentation>If an icon font is used, the color can be chosen from the semantic icon colors.</documentation>
+		</property>
+		<property group="Appearance" name="iconDensityAware" type="sap.ui.core/boolean" defaultValue="true">
+			<documentation>By default, this is set to true but then one or more requests are sent trying to get the density perfect version of image if this version of image doesn't exist on the server.
+
+If bandwidth is the key for the application, set this value to false.</documentation>
+		</property>
+	</properties>
+</control>

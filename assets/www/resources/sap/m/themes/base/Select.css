@@ -1,0 +1,91 @@
+/* ======================================= */
+/* CSS for control sap.m/Select.control    */
+/* ======================================= */
+
+/* commons */
+
+.sapMSlt,
+.sapMSlt > select,
+.sapMSlt > .sapMSltLabel {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.sapMSlt > select,
+.sapMSlt > select > option {
+	font: inherit;
+}
+
+/* select */
+
+.sapMSlt {
+	position: relative;
+	display: inline-block;
+}
+
+.sapMSlt:not(.sapMSltDisabled) {
+	cursor: pointer;
+}
+
+/* label */
+
+.sapMSlt > .sapMSltLabel {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-decoration: none;
+	text-indent: 0;
+	text-align: left;
+	-webkit-user-select: none;
+}
+
+/* label list context */
+
+.sapMILI-CTX .sapMSltLabel {
+	text-align: right;
+}
+
+/* native HTML select element */
+
+.sapMSlt > select {
+	-webkit-appearance: none;
+	position: relative;
+	cursor: inherit;
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	opacity: 0;
+}
+
+.sapMSlt > select:not(.sapMSltNativeHidden) {
+	display: block !important; /* override the inline CSS display property */
+}
+
+/* disable */
+
+.sapMSltDisabled {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+/* custom select */
+
+.sapMSltInput {
+	position: absolute;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	border: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font: inherit;
+	width: 100%;
+	cursor: inherit;
+}

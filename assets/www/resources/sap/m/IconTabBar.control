@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+	<name>IconTabBar</name>
+	<author>SAP AG</author>
+	<documentation>A tab bar with large icons</documentation>
+
+	<baseType>sap.ui.core/Control</baseType>
+	<properties>
+		<property group="Misc" name="showSelection" type="boolean" defaultValue="true">
+			<documentation>Defines whether the current selection should be visualized</documentation>
+		</property>
+		<property group="Appearance" name="iconDensityAware" type="sap.ui.core/boolean" defaultValue="true">
+			<documentation>By default, this is set to true but then one or more requests are sent trying to get the density perfect version of image if this version of image doesn't exist on the server.
+
+If bandwidth is the key for the application, set this value to false.</documentation>
+		</property>
+	</properties>
+	<aggregations>
+		<aggregation cardinality="0..n" name="items" type="sap.m/IconTab">
+			<documentation>The items displayed in the IconTabBar</documentation>
+		</aggregation>
+		<aggregation cardinality="0..1" name="content" type="sap.ui.core/Control">
+			<documentation>The content displayed below the IconTabBar</documentation>
+		</aggregation>
+	</aggregations>
+	<events>
+		<event name="select">
+			<documentation>This event will be fired before an item is selected.</documentation>
+			<parameters>
+				<parameter name="item" type="sap.m/IconTabFilter">
+					<documentation>The selected item.</documentation>
+				</parameter>
+				<parameter name="key" type="string">
+					<documentation>The key of the selected item.</documentation>
+				</parameter>
+			</parameters>
+		</event>
+	</events>
+</control>

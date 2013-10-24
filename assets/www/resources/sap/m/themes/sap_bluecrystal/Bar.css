@@ -1,0 +1,133 @@
+/* ============================================= */
+/* CSS for control sap.m/Bar.control             */
+/* BlueCrystal theme                             */
+/* ============================================= */
+
+.sapMBar span,
+.sapMBar label,
+.sapMBar ul,
+.sapMBar li{
+	line-height: 3rem;
+	vertical-align: top; /* for compatibility with the button vertical alignment */
+}
+
+/* 1rem padding inside of a left/right bar */
+.sapMBarLeft>span,
+.sapMBarLeft>label{
+	margin-left: 1rem;
+}
+
+.sapMBarRight>span,
+.sapMBarRight>label{
+	margin-right: 1rem;
+}
+
+/* 1rem padding inside of the middle bar */
+.sapMBarPH>span,
+.sapMBarPH>label{
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+/* select control in a bar */
+.sapMBar .sapMSlt {
+	vertical-align: top;
+}
+
+.sapMBarGradient(@color, @alpha:100%) {
+	background-color: fade(@color, @alpha);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=fade(lighten(@color, 2), @alpha), endColorstr=fade(darken(@color, 2), @alpha),GradientType=0 );
+	background: -ms-linear-gradient(top, fade(lighten(@color, 2), @alpha) 0%, fade(@color, @alpha) 33%, fade(@color, @alpha) 75%, fade(darken(@color, 2), @alpha) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, fade(lighten(@color, 2), @alpha)), color-stop(0.33, fade(@color, @alpha)), color-stop(0.75, fade(@color, @alpha)), color-stop(1, fade(darken(@color, 2), @alpha)));
+	background-image: -webkit-linear-gradient(top, fade(lighten(@color, 2), @alpha) 0%, fade(@color, @alpha) 33%, fade(@color, @alpha) 75%, fade(darken(@color, 2), @alpha) 100%);
+	background: linear-gradient(top, fade(lighten(@color, 2), @alpha) 0%, fade(@color, @alpha) 33%, fade(@color, @alpha) 75%, fade(darken(@color, 2), @alpha) 100%);
+}
+
+@sapMBarShadow: inset 0 -0.0625em @sapUiLightBorder;
+@sapMFooterShadow: inset 0 0.0625em 0 fade(@sapUiExtraLightBorder,20%);
+
+.sapMBar {
+	height: 3em;
+	line-height: 3em;
+	color: @sapUiBarText;
+	background-color: @sapUiHeaderBG;
+	/* 1px down white shadow with 50% opacity */
+	text-shadow: 0em 0.0625em 0em fade(@sapUiTextInverted, 50%);
+	/* 1px inside border line at the bottom of a bar */
+	-webkit-box-shadow: @sapMBarShadow;
+	box-shadow: @sapMBarShadow;
+}
+
+.sapMBar.sapMBarTranslucent {
+	background-color: fade(@sapUiHeaderBG, 90%);
+}
+
+.sapMBar:active, .sapMBar:hover {
+	text-shadow: none;
+}
+
+.sapMBar.sapMPageHeader {
+	.sapMBarGradient(@sapUiBarBG);
+}
+
+html[data-sap-ui-browser*='ie9'] .sapMBar.sapMPageHeader:after {
+	content: "";
+	position: absolute;
+	width:100%;
+	bottom: 0;
+	border-bottom: 0.0625em solid @sapUiLightBorder;
+}
+
+/* Branding line, use "before" so that active buttons are over it */
+.sapMBar.sapMPageHeader:before {
+	content: "";
+	position: absolute;
+	width:100%;
+	top: 0;
+	border-top: 0.25rem solid @sapUiBarBrandingBG;
+}
+.sapMPopover .sapMBar.sapMPageHeader:before {
+	display: none;
+}
+
+.sapMBar.sapMPageHeader.sapMBarTranslucent {
+	.sapMBarGradient(@sapUiBarBG, 90%);
+}
+
+@media (min-height: @sapMShellMinHeightForHeader) {
+	/* Shell draws its own branding bar */
+	.sap-desktop .sapMShell .sapMBar.sapMPageHeader:before{
+		display: none;
+	}
+}
+
+.sapMBar.sapMHeader-CTX{
+	color: @sapUiBarHeading;
+}
+
+.sapMBar-CTX .sapMBarLeft > .sapMImg,
+.sapMBar-CTX .sapMBarPH > .sapMImg, 
+.sapMBar-CTX .sapMBarRight > .sapMImg  {
+	vertical-align: middle;
+}
+
+footer.sapMBar,
+footer.sapMBar.sapMBarTranslucent {
+	color: @sapUiFooterText;
+	/* 1px down black shadow with 50% opacity */
+	text-shadow: 0em 0.0625em 0em fade(@sapUiStandardText, 50%);
+	background-color: fade(@sapUiFooterBG, 90%);
+	background-image: none;
+	/* 1px inside border line at the top of a footer */
+	-webkit-box-shadow: @sapMFooterShadow;
+	box-shadow: @sapMFooterShadow;
+}
+.sap-desktop footer.sapMBar {
+	background-color: @sapUiFooterBG;
+}
+
+/* Footer separator inside of a SplitApp control */
+.sapMSplitAppMaster footer.sapMFooter-CTX{
+	-webkit-box-shadow: inset -1px 0 0 darken(@sapUiDarkBorder, 75%);
+	box-shadow: inset -1px 0 0 darken(@sapUiDarkBorder, 75%);
+}

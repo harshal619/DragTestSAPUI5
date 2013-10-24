@@ -1,0 +1,95 @@
+/* ============================================= */
+/* CSS for control sap.m/CheckBox.control        */
+/* BlueCrystal theme                             */
+/* ============================================= */
+.sapMCb{
+	box-sizing: border-box;
+	height: 3rem;
+	line-height: 3rem;
+	
+	vertical-align: top;
+	text-align: left;
+	padding: 0 0 0 3rem;
+}
+
+.sapMCb>label{
+	vertical-align: top;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.sapMCbBg { /* check box itself */
+	position: absolute;
+	left: 0.8125em;
+	top: 0.8125em;
+	height: 1.125rem;
+	width: 1.125rem;
+	line-height: 1.125rem;
+	padding: 0;
+
+	text-align: center;
+	
+	border: solid 0.125rem @sapUiCheckBoxUncheckedColor;
+	border-radius:0.125rem;
+	-webkit-focus-ring-color: none;
+	-webkit-border-radius: 0.125rem;
+}
+
+.sapMCbBg.sapMCbMarkChecked:before {
+	content: "\e05b"; 
+	font-family: "SAP-icons";
+	color: @sapUiCheckBoxCheckedColor;
+}
+
+.sapMCbBg > input{
+	position: absolute;
+	left: -10em;
+	-webkit-appearance:none;
+	visibility: hidden;
+}
+
+.sapMCbBg:focus, 
+.sapMCbBg:active {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+	outline: none;
+}
+
+.sapMLIBActive .sapMCbBg,
+.sapMLIBActive .sapMCbBg.sapMCbMarkChecked,
+.sapMLIBActive .sapMCbBg.sapMCbBgDis,
+.sapMLIBActive .sapMCbBg.sapMCbBgDis.sapMCbMarkChecked{
+	border-color: @sapUiLITextInverted;
+}
+
+.sapMCbBg.sapMCbMarkChecked {
+	border-color: @sapUiCheckBoxCheckedColor;
+}
+
+.sapMCbBg.sapMCbBgDis {
+	border-color: fade(@sapUiCheckBoxUncheckedColor,25);
+}
+
+.sapMCbBg.sapMCbBgDis.sapMCbMarkChecked {
+	border-color: fade(@sapUiCheckBoxCheckedColor,25);
+}
+
+.sapMLIBActive .sapMActive .sapMCbBg.sapMCbActiveStateOff.sapMCbMarkChecked:before,
+.sapMLIBActive .sapMCbBg:active.sapMCbActiveStateOff.sapMCbMarkChecked:before,
+.sapMLIBActive .sapMCbBg.sapMCbMarkChecked:before,
+.sapMLIBActive .sapMActive .sapMCbBg.sapMCbMarkChecked:before,
+.sapMLIBActive .sapMCbBg:active.sapMCbMarkChecked:before,
+.sapMLIBActive .sapMCbBg.sapMCbBgDis.sapMCbMarkChecked:before{
+	color: @sapUiLITextInverted;
+}
+
+.sapMActive .sapMCbBg.sapMCbActiveStateOff.sapMCbMarkChecked:before,
+.sapMCbBg:active.sapMCbActiveStateOff.sapMCbMarkChecked:before,
+.sapMActive .sapMCbBg.sapMCbMarkChecked:before,
+.sapMCbBg:active.sapMCbMarkChecked:before {
+	color: @sapUiCheckBoxCheckedColor;
+}
+
+.sapMCbBg.sapMCbBgDis.sapMCbMarkChecked:before {
+	color: fade(@sapUiCheckBoxCheckedColor, 25);
+}

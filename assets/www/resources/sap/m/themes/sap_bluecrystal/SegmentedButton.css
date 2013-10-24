@@ -1,0 +1,113 @@
+/* ==============================================*/
+/* CSS for control sap.m/SegmentedButton.control */
+/* BlueCrystal theme                             */
+/* ==============================================*/
+
+.sapMSegB {
+	height: 3rem;
+	position: relative;
+}
+
+/* branding bar */
+.sapMPageHeader.sapMBar-CTX .sapMSegB:before{
+	content: "";
+	position: absolute;
+	width:100%;
+	top: 0;
+	border-top: 0.25rem solid @sapUiBarBrandingBG;
+}
+@media (min-height: @sapMShellMinHeightForHeader) {
+	/* Shell draws its own branding bar */
+	.sap-desktop .sapMShell .sapMPageHeader.sapMBar-CTX .sapMSegB:before{
+		display: none;
+	}
+}
+
+.sapMSegBBtn {
+	font-size: 0.875em;
+	height: 3rem;
+	line-height: 3rem;
+	background: @sapUiSegmentedBtnBG;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	text-align: center;
+	text-shadow: 0 1px 0 sapUiSegmentedBtnTextShadowLight;
+	color: @sapUiSegmentedBtnText;
+}
+.sapMSegBIcons .sapMSegBBtn{
+	padding: 0;
+}
+
+.sapMSegBBtn:first-child {
+	box-shadow: inset 0 0 0 0.0625rem @sapUiSegmentedBtnBorder;
+}
+.sapMSegBBtn:nth-child(n+2) {
+	box-shadow: inset -0.0625rem 0 @sapUiSegmentedBtnBorder, inset 0 0.0625rem 0 @sapUiSegmentedBtnBorder, inset 0 -0.0625rem 0 @sapUiSegmentedBtnBorder;
+}
+
+.sapMSegBBtn.sapMSegBBtnSel {
+	background: @sapUiHoverBG;
+}
+.sapMSegBBtn.sapMBtnActive {
+	background: @sapUiSegmentedBtnBGActive;
+	color: @sapUiBtnTextActive;
+	.sapUiIcon{
+		color: @sapUiSegmentedBtnIconDark;
+		text-shadow: 0;
+	}
+}
+.sapMSegB img {
+	line-height: 2rem;
+	height: 2rem;
+	width: 2rem;
+	vertical-align: middle;
+}
+.sapMSegBBtn .sapUiIcon {
+	font-size: 1.375rem;
+	line-height: 3.0rem;
+	width: 3.0rem;
+	color: @sapUiSegmentedBtnIconLight;
+	vertical-align: middle;
+	text-align: center;
+}
+.sapMBar-CTX {
+	.sapMSegBBtn{
+		background: transparent;
+		box-shadow: none;
+		border-width: 0px 0.0625rem;
+		border-style: solid;
+		border-color: @sapUiLightBorder;
+		color: @sapUiSegmentedBtnTextHeader;
+	}
+	.sapMSegBBtn + .sapMSegBBtn{
+		border-left: none;
+	}
+	.sapMSegBBtn.sapMSegBBtnSel {
+		background: @sapUiHoverBG;
+		box-shadow: inset 0 -0.0625rem 0 @sapUiLightBorder; 
+	}
+	.sapMSegBBtn.sapMBtnActive {
+		background: @sapUiSegmentedBtnBGActive;
+		color: @sapUiSegmentedBtnTextActive;
+	}
+}
+
+.sapMFooter-CTX{
+	.sapMSegBBtn {
+		color: @sapUiSegmentedBtnTextFooter;
+		border-color: @sapUiSegmentedBtnBorderFooter;
+		text-shadow: 0 1px 0 @sapUiSegmentedBtnTextShadowDark
+	}
+	.sapMSegBBtn .sapUiIcon {
+		color: @sapUiSegmentedBtnIconDark;
+	}
+	.sapMSegBBtn.sapMSegBBtnSel {
+		background: @sapUiHoverBG;
+		box-shadow: inset 0 0.0625rem 0 @sapUiDarkBorder; 
+		color: @sapUiSegmentedBtnText;
+		text-shadow: 0 1px 0 @sapUiSegmentedBtnTextShadowLight;
+	}
+	.sapMSegBBtn.sapMSegBBtnSel .sapUiIcon {
+		color: @sapUiSegmentedBtnIconLight;
+	}
+}

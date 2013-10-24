@@ -1,0 +1,230 @@
+/* ============================================= */
+/* CSS for control sap.m/Popover.control         */
+/* BlueCrystal theme                             */
+/* ============================================= */
+.sapMPopover{
+	background-color: @sapUiPopoverContBG;
+	border: @sapUiPopupBorder;
+	box-shadow: @sapUiPopupBoxShadow;
+	-webkit-box-shadow: @sapUiPopupBoxShadow;
+	border-radius: @sapUiPopupBorderRadius;
+}
+
+.sapMPopoverCont{
+	background-color: transparent;
+	margin: 0;
+}
+
+/* padding for title in header*/
+.sapMPopover > .sapMPopoverHeader > .sapMBarMiddle > .sapMBarPH {
+	padding: 0 1rem;
+	box-sizing: border-box;
+}
+
+.sapMPopover > .sapMPopoverHeader > .sapMBarMiddle > .sapMBarPH > .sapMLabel {
+	display: inline-block;
+}
+
+.sapMPopover > .sapMPopoverHeader > .sapMBarLeft > .sapMBtn,
+.sapMPopover > .sapMPopoverHeader > .sapMBarRight > .sapMBtn {
+	position: relative;
+}
+
+/*gradient border for left and right buttons*/
+.sapMPopover > .sapMPopoverHeader > .sapMBarRight > .sapMBtn:before,
+.sapMPopover > .sapMPopoverHeader > .sapMBarLeft > .sapMBtn:after {
+	content: "";
+	position: absolute;
+	background: @sapUiLightBorder;
+/* 	background: @sapUiDarkBorder; */
+/* 	background: -webkit-gradient(linear, 0 0, 0 100%, from(fade(@sapUiDarkBorder, 0)), to(@sapUiDarkBorder)); */
+/* 	background: -webkit-linear-gradient(fade(@sapUiDarkBorder, 0), @sapUiDarkBorder); */
+/* 	background: -moz-linear-gradient(fade(@sapUiDarkBorder, 0), @sapUiDarkBorder); */
+/* 	background: -o-linear-gradient(fade(@sapUiDarkBorder, 0), @sapUiDarkBorder); */
+/* 	background: -ms-linear-gradient(top, fade(@sapUiDarkBorder, 0) 0%, @sapUiDarkBorder 100%); */
+	width: 0.0625rem;
+	top: 0;
+	bottom: 0;
+}
+
+.sapMPopover > .sapMPopoverHeader > .sapMBarRight > .sapMBtn:before {
+	left: 0;
+}
+
+.sapMPopover > .sapMPopoverHeader > .sapMBarLeft > .sapMBtn:after {
+	right: 0;
+}
+
+/*for only two buttons in footer's contentMiddle aggregation*/
+.sapMPopover > .sapMPopoverFooter.sapMPopoverSpecialFooter > .sapMBarMiddle {
+	position: static;
+	display: block;
+	height: 100%;
+}
+
+.sapMPopover > .sapMPopoverFooter.sapMPopoverSpecialFooter > .sapMBarMiddle > .sapMBarPH {
+	display: block;
+}
+
+.sapMPopover > .sapMPopoverFooter.sapMPopoverSpecialFooter > .sapMBarMiddle > .sapMBarPH > button.sapMBtn {
+	width: 50%;
+}
+
+.sapMPopover > .sapMPopoverFooter.sapMPopoverSpecialFooter > .sapMBarMiddle > .sapMBarPH {
+	button.sapMBtn:last-child {
+		border-right: none;
+	}
+	button.sapMBtn:first-child {
+		border-left: none;
+	}
+}
+
+/*arrows*/
+/* shared properties for arrow */
+.sapMPopoverArr{
+	display: block;
+	border-style: solid;
+	border-width: 16px;
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+.sapMPopoverArr:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width:0;
+	height:0;
+	border-style: solid;
+	border-width: 16px;
+}
+
+/* pointing downward arrow */
+.sapMPopoverArrDown{
+	/* offset */
+	left: 20px;
+	/* position */
+	bottom: -33px;
+}
+
+/* pointing upward arrow */
+.sapMPopoverArrUp{
+	/* offset */
+	left: 20px;
+	/* position */
+	top: -33px;
+}
+
+/* pointing left arrow */
+.sapMPopoverArrLeft{
+	/* offset */
+	top: 20px;
+	/* position */
+	left: -33px;
+}
+
+/* pointing right arrow */
+.sapMPopoverArrRight{
+	/* offset */
+	top: 20px;
+	/* position */
+	right: -33px;
+}
+
+/*Arrow Down*/
+.sapMPopoverArrDown{
+	border-color: transparent;
+	border-top-color: @sapUiPopupBorderColor;
+}
+
+.sapMPopoverArrDown:after{
+	border-color: transparent;
+	border-top-color: @sapUiPopoverContBG;
+	bottom: -15px;
+	left: -16px;
+}
+
+.sapMPopoverWithFooter > .sapMPopoverArrDown{
+	border-top-color: @sapUiExtraLightBorder;
+}
+
+.sapMPopoverWithFooter > .sapMPopoverArrDown:after {
+	border-top-color: fade(@sapUiDeepBG, 90);
+}
+
+/* Arrow Up */
+.sapMPopoverArrUp{
+	border-color: transparent;
+	border-bottom-color: @sapUiPopupBorderColor;
+}
+
+.sapMPopoverArrUp:after{
+	border-color: transparent;
+	border-bottom-color: lighten(@sapUiExtraLightBG, 2%);
+	bottom: -17px;
+	left: -16px;
+}
+
+.sapMPopoverWithoutBar > .sapMPopoverArrUp:after{
+	border-color: transparent;
+	border-bottom-color: @sapUiPopoverContBG;
+}
+
+/*Arrow Left*/
+.sapMPopoverArrLeft{
+	border-color: transparent;
+	border-right-color: @sapUiPopupBorderColor;
+}
+
+.sapMPopoverArrLeft:after{
+	border-color: transparent;
+	border-right-color: @sapUiPopoverContBG;
+	top: -16px;
+	left: -15px;
+}
+
+.sapMPopoverHeaderAlignArr.sapMPopoverArrLeft:after{
+	border-color: transparent;
+	border-right-color: lighten(@sapUiExtraLightBG, 2%);
+}
+
+.sapMPopoverCrossArr.sapMPopoverArrLeft:after{
+	border-color: transparent;
+	border-right-color: @sapUiPopupBorderColor;
+/* 	left: -16px; */
+}
+
+.sapMPopoverFooterAlignArr.sapMPopoverArrLeft:after{
+	border-color: transparent;
+	border-right-color: fade(@sapUiDeepBG, 90);
+}
+
+/*Arrow Right*/
+.sapMPopoverArrRight{
+	border-color: transparent;
+	border-left-color: @sapUiPopupBorderColor;
+}
+
+.sapMPopoverArrRight:after{
+	border-color: transparent;
+	border-left-color: @sapUiPopoverContBG;
+	top: -16px;
+	right: -15px;
+}
+
+.sapMPopoverHeaderAlignArr.sapMPopoverArrRight:after{
+	border-color: transparent;
+	border-left-color: lighten(@sapUiExtraLightBG, 2%);
+}
+
+.sapMPopoverCrossArr.sapMPopoverArrRight:after{
+	border-color: transparent;
+	border-left-color: @sapUiPopupBorderColor;
+/* 	right: -16px; */
+}
+
+.sapMPopoverFooterAlignArr.sapMPopoverArrRight:after{
+	border-color: transparent;
+	border-left-color: fade(@sapUiDeepBG, 90);
+}

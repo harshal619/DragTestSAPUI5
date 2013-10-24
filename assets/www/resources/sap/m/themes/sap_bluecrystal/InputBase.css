@@ -1,0 +1,156 @@
+/* ============================================= */
+/* CSS for control sap.m/InputBase.control       */
+/* BlueCrystal theme                             */
+/* ============================================= */
+
+
+.sapMInputBase {
+	-webkit-box-sizing:    border-box;
+	box-sizing:            border-box;
+	background-color:	   transparent;
+	border:                0;
+	position:              relative;
+	display:			   inline-block;
+	margin: 			   0.25rem 0 0.25rem 0;
+	height: 			   2.5rem;
+	vertical-align:        top;
+}
+
+.sapMInputBaseInner {
+	color: 				   @sapUiInputBaseText;
+	background-color:	   @sapUiInputBaseBG;
+	border:		           1px solid @sapUiInputBaseBorder;
+	border-radius:         0;
+	-webkit-appearance:    none;
+	margin:                0;
+	-webkit-box-sizing:    border-box;
+	box-sizing:            border-box;
+	font-size: 			   0.875rem;
+	font-family: 		   @sapUiInputBaseFont;
+	padding:               0.5rem 0.625rem 0.625rem 0.625rem;
+	line-height:		   normal;
+	height: 			   2.5rem;
+	vertical-align:		   top;
+}
+
+.sapMInputBaseInner::-webkit-input-placeholder {
+	color:				   @sapUiInputBasePlaceholder;
+	font-size: 			   0.875rem;
+	font-family: 		   @sapUiInputBasePlaceholderFont;
+}
+
+.sapMInputBaseInner:-ms-input-placeholder {
+	color:				   @sapUiInputBasePlaceholder;
+	font-size: 			   0.875rem;
+	font-family: 		   @sapUiInputBasePlaceholderFont;
+}
+
+.sapMInputBasePlaceholder {
+	color:				   @sapUiInputBasePlaceholder;
+	position:			   absolute;
+	line-height:	       normal;
+	-webkit-box-sizing:    border-box;
+	box-sizing:            border-box;
+	font-size: 			   0.875rem; 
+	font-family: 		   @sapUiInputBasePlaceholderFont;
+	font-style:			   italic;
+	text-overflow:		   ellipsis;
+	white-space:           nowrap;
+	overflow:			   hidden;
+	padding:               0.688rem 0.688rem 0.625rem 0.688rem;
+}
+
+.sapMInputBaseWarningInner.sapMInputBaseInner {
+	border:	2px solid @sapUiInputBaseWarning;
+	padding: 0.563rem 0.563rem 0.5rem 0.563rem;
+}
+
+.sapMInputBaseErrorInner.sapMInputBaseInner {
+	border: 2px solid @sapUiInputBaseError;
+	padding: 0.563rem 0.563rem 0.5rem 0.563rem;
+}
+
+.sapMInputBaseSuccessInner.sapMInputBaseInner {
+	border: 2px solid @sapUiInputBaseSuccess;
+	padding: 0.563rem 0.563rem 0.5rem 0.563rem;
+}
+
+.sapMInputBaseReadonlyInner.sapMInputBaseInner {
+	border: 1px solid transparent;
+	background-color: transparent;
+}
+
+.sapMInputBaseInner:focus {
+	outline:               none;
+	outline-width:         0;
+}
+
+.sapMInputBaseInner:focus:not(.sapMInputBaseWarningInner):not(.sapMInputBaseErrorInner):not(.sapMInputBaseSuccessInner):not(.sapMInputBaseReadonlyInner){
+	border: 1px solid @sapUiInputBaseFocus;
+}
+
+
+.sapMInputBaseViewMode.sapMInputBase  {
+	height: 1.25rem;
+}
+
+.sapMInputBaseViewModeInner.sapMInputBaseInner {
+	line-height: 1.25rem;
+	height: 1.25rem;
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+}
+
+
+.sapMILI-CTX .sapMInputBase {
+	display: block;
+}
+
+.sapMILI-CTX .sapMInputBaseInner {
+	text-align:	right;
+	background-color: transparent;
+	border: 0;
+}
+
+.sapMILI-CTX .sapMInputBasePlaceholder{
+	text-align: right;
+}
+
+.sapMILI-CTX .sapMInputBaseErrorInner.sapMInputBaseInner {
+	border: 2px solid @sapUiInputBaseError;
+}
+
+.sapMILI-CTX .sapMInputBaseWarningInner.sapMInputBaseInner{
+	border: 2px solid @sapUiInputBaseWarning;
+}
+
+.sapMILI-CTX .sapMInputBaseSuccessInner.sapMInputBaseInner{
+	border: 2px solid @sapUiInputBaseSuccess;
+}
+
+.sapMILI-CTX .sapMInputBaseInner:focus:not(.sapMInputBaseWarningInner):not(.sapMInputBaseErrorInner):not(.sapMInputBaseSuccessInner):not(.sapMInputBaseReadonlyInner){
+	border: 0;
+}
+
+.sapMLIBActive .sapMInputBaseInner{
+	color: @sapUiLITextInverted;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.sapMInputBaseMessage {
+	color: 				   @sapUiInputBaseText;
+	background-color:	   @sapUiInputBaseBG;
+	border:		           1px solid @sapUiInputBaseBorder;
+	font-size: 			   0.875rem;
+	font-family: 		   @sapUiInputBaseFont;
+	padding:               0.625rem 0.625rem 0.563rem 0.625rem;
+	line-height:		   normal;
+	vertical-align:		   top;
+}

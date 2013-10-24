@@ -1,0 +1,166 @@
+/* ====================================================== */
+/* CSS for control sap.m/Switch.control BlueCrystal theme */
+/* ====================================================== */
+
+/* switch required less variables */
+
+@sapMSwitchOnPosition: -45;
+@sapMSwitchOffPosition: 0;
+@sapMSwitchTransitionTime: 175;
+
+/* switch container */
+
+.sapMSwtCont {
+	padding: 0.5rem 0 0.5rem 0;
+}
+
+/* switch */
+
+.sapMSwt {
+	width: 4.875rem;
+	height: 1.875rem;
+	border: 0.0625rem solid;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+/* switch bar context */
+
+.sapMBar-CTX .sapMSwt {
+	margin-top: 0.5625rem;	/* TODO */
+}
+
+/* switch inner */
+
+.sapMSwtOff .sapMSwtInner {
+	left: -2.8125rem;
+}
+
+/* switch handler */
+
+.sapMSwtHandle {
+	width: 1.5rem;
+	height: 1.5rem;
+	top: 0.1875rem;
+	left: 3.125rem;
+	border-radius: 0.75rem;
+
+	/* CSN 0001799608 2013 */
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.sapMSwtOn .sapMSwtHandle {
+	background-color: @sapUiSwitchHandleOnBG;
+}
+
+.sapMSwtOff .sapMSwtHandle {
+	background-color: @sapUiSwitchHandleOffBG;
+}
+
+/* switch backgrounds */
+
+.sapMSwtOn:not(.sapMSwtAcceptReject) {
+	background-color: @sapUiSwitchOnBG;
+	border-color: @sapUiSwitchOnBorder;
+}
+
+.sapMSwtOff:not(.sapMSwtAcceptReject) {
+	background-color: @sapUiSwitchOffBG;
+	border-color: @sapUiSwitchOffBorder;
+}
+
+/* switch text */
+
+.sapMSwtText {
+	font-size: 0.875rem;
+	width: 100%;
+	line-height: 1.875rem;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.sapMSwtOn .sapMSwtText {
+	color: @sapUiSwitchTextOn;
+}
+
+.sapMSwtOff .sapMSwtText {
+	color: @sapUiSwitchTextOff;
+}
+
+.sapMSwtTextOff {
+	left: 2.8125rem;
+}
+
+.sapMSwtText > span {
+	display: block;
+	width: 3.125rem;
+	text-transform: uppercase;
+}
+
+.sapMSwtTextOff > span {
+	float: right;
+}
+
+/* switch CSS transitions */
+
+.sapMSwtTrans .sapMSwtInner {
+	-webkit-transition: left 0.125s ease-in-out;
+	transition: left 0.125s ease-in-out;
+}
+
+/* switch disabled */
+
+.sapMSwtDisabled {
+	opacity: 0.3;
+}
+
+/* ========================== */
+/* switch type "AcceptReject" */
+/* ========================== */
+
+/* switch backgrounds */
+
+.sapMSwtAcceptReject.sapMSwt {
+	background: @sapUiSwitchAcceptRejectBG;
+}
+
+.sapMSwtAcceptReject.sapMSwtOn,
+.sapMSwtAcceptReject .sapMSwtTextOn {
+	border-color: @sapUiPositiveIcon;
+}
+
+.sapMSwtAcceptReject.sapMSwtOff,
+.sapMSwtAcceptReject .sapMSwtTextOff {
+	border-color: @sapUiNegativeIcon;
+}
+
+/* switch text */
+
+.sapMSwtAcceptReject .sapMSwtTextOn > span::before {
+	content: "\e05b";
+	color: @sapUiPositiveText;
+}
+
+.sapMSwtAcceptReject .sapMSwtTextOff > span::before {
+	content: "\e03e";
+	color: @sapUiNegativeText;
+}
+
+/* switch handler */
+
+.sapMSwtAcceptReject .sapMSwtHandle {
+	background: @sapUiSwitchAcceptRejectBG;
+	border-style: solid;
+	border-width: 0.125rem;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.sapMSwtAcceptReject.sapMSwtOn  .sapMSwtHandle {
+	border-color: @sapUiPositiveIcon;
+}
+
+.sapMSwtAcceptReject.sapMSwtOff  .sapMSwtHandle {
+	border-color: @sapUiNegativeIcon;
+}

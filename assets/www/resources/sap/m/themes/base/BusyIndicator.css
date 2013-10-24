@@ -1,0 +1,61 @@
+
+/* ============================================= */
+/* CSS for controlsap.m/BusyIndicator.control    */
+/* ============================================= */
+
+.sapMBusyIndicator, .sapMBusyIndicatorLight, .sapMBusyIndicatorDark{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.sapMBsyIndLabel{
+	vertical-align: middle;
+	padding-left: .5em;
+}
+
+.sapMBsyIndIcon{
+	vertical-align: middle;
+
+	transform:rotate(0deg) translateZ(0);
+	transition-duration:0ms;
+	animation-name:sapMBsyIndRotate;
+	animation-duration:2s;
+	animation-iteration-count:infinite;
+	animation-timing-function:linear;
+
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+	-webkit-animation-name:sapMBsyIndRotate;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+	
+	-ms-transform:rotate(0deg) translateZ(0);
+	-ms-transition-duration:0ms;
+	-ms-animation-name:sapMBsyIndRotate;
+	-ms-animation-duration:2s;
+	-ms-animation-iteration-count:infinite;
+	-ms-animation-timing-function:linear;
+}
+
+@keyframes sapMBsyIndRotate {
+	from { transform:rotate(0deg) translateZ(0); }
+	to { transform:rotate(360deg) translateZ(0); }
+}
+
+@-webkit-keyframes sapMBsyIndRotate {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+
+.sapMSpinner {
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+}
+
+.sapMSpin {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}

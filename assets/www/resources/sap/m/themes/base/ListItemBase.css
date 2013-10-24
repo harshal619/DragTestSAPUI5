@@ -1,0 +1,48 @@
+
+/* ============================================= */
+/* CSS for control sap.m/ListItemBase.control    */
+/* ============================================= */
+
+.sapMLIB{
+	-webkit-user-select: none;
+	-webkit-box-align: center;
+	-ms-user-select: none;
+	-ms-flex-align: center;
+}
+
+.sapMLIBSelectS,
+.sapMLIBSelectSL,
+.sapMLIBSelectM,
+.sapMLIBSelectD{
+	width:2.75em;
+	height:2.75em;
+}
+
+.sap-desktop .sapMLIBCursor,
+.sap-desktop .sapMLIBCursor + .sapMListTblSubRow {
+	cursor: pointer;
+}
+
+.sapMLIBSelectSM{
+	display: none;
+}
+
+.sapMLIBCounter{
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	-ms-flex-align: center;
+	-ms-flex-pack: center;
+}
+
+.sapMLIBImgNav,
+.sapMLIBImgDet,
+.sapMLIBImgDel,
+.sapMLIBIconDet {
+	overflow: hidden;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	display: -webkit-box;
+	-ms-flex-align: center;
+	-ms-flex-pack: center;
+	display: -ms-flexbox;
+}

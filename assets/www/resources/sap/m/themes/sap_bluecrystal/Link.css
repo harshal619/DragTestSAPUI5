@@ -1,0 +1,20 @@
+
+/* ============================================= */
+/* CSS for control sap.m/Link.control */
+/* ============================================= */
+
+/* Hover Decoration only for desktop clients*/
+.sap-desktop .sapMLnk:hover {
+	text-decoration: underline;
+}
+
+/* No decoration or color change for disabled links*/
+.sap-desktop .sapMLnk.sapMLnkDsbl:hover {
+	color: @sapUiTextDisabled;
+	text-decoration: none;
+}
+
+.sapMLIBActive .sapMLnk {
+	color: @sapUiLITextInverted;
+	text-decoration: underline;
+}

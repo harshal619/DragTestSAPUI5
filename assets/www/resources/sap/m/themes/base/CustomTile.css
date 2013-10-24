@@ -1,0 +1,27 @@
+/* ============================================= */
+/* CSS for control sap.me/StandardTile.control */
+/* ============================================= */
+
+/* Style for Tablet/Desktop */
+.sapMCustomTile
+{
+	display: inline-block;
+	box-sizing: border-box;
+	-webkit-transition-property: transform3d;
+	-webkit-transition-duration: 0.2s;
+	width: 13em;
+	height: 15em;
+	margin:0em;
+} 
+
+.sapMCustomTileContent {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.sap-phone .sapMCustomTile {
+	width: 9.5em;
+	height: 11em;
+	margin: 0em;
+}

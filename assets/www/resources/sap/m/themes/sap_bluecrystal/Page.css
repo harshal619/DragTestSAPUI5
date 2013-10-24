@@ -1,0 +1,66 @@
+/* ==================================================== */
+/* CSS for control sap.m/Page.control BlueCrystal theme */
+/* ==================================================== */
+
+.sapMPageBgSolid {
+	background-color: @sapUiPageBG;
+}
+
+/* page with header or subHeader */
+
+.sapMPageWithHeader > section > .sapMPageScroll,
+.sapMPageWithSubHeader > section > .sapMPageScroll {
+	border-top-width: 3em;
+}
+
+.sap-desktop .sapMPageWithHeader > section,
+.sap-desktop .sapMPageWithSubHeader > section,
+.sapMPageWithHeader > section > .sapMScrollbarV,
+.sapMPageWithSubHeader > section > .sapMScrollbarV {
+	top: 3em;
+}
+
+/* page with header and subHeader */
+
+.sapMPageWithHeader.sapMPageWithSubHeader > section > .sapMPageScroll {
+	border-top-width: 6em;
+}
+
+.sap-desktop .sapMPageWithHeader.sapMPageWithSubHeader > section,
+.sapMPageWithHeader.sapMPageWithSubHeader > section > .sapMScrollbarV {
+	top: 6em;
+}
+
+/* page with footer */
+
+.sapMPageWithFooter > section > .sapMPageScroll {
+	border-bottom-width: 3em;
+}
+
+.sap-desktop .sapMPageWithFooter > section,
+.sapMPageWithFooter > section > .sapMScrollbarV {
+	bottom: 3em;
+}
+
+/* page app icon */
+
+.sapMBar-CTX .sapMBarLeft > .sapMImg.sapMPageAppIcon {
+	max-height: 1.375em;
+	max-width: 1.375em;
+	margin: 0.8125em;
+}
+
+/* vertical scroll bar */
+
+.sapMPage .sapMScrollbarV > div {
+	background-color: @sapMUiScrollBarBG;
+	border-color: @sapMUiScrollBarBorderColor;
+}
+
+/* sap.m.Shell + Tiles Page specific style */
+
+@media (min-height: @sapMShellMinHeightForHeader) {
+	.sap-desktop .sapMShell .sapMPage.sapMPageHideHeaderWhenShellHeader header.sapMBar {
+		display: none;
+	}
+}

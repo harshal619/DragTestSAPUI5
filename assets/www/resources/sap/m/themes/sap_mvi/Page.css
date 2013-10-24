@@ -1,0 +1,122 @@
+/* ============================================ */
+/* CSS for control sap.m/Page.control MVI Theme */
+/* ============================================ */
+
+/* ======= */
+/* Commons */
+/* ======= */
+
+.sapMPageBgSolid,
+.sapMPageBgStandard {
+	background-color: @sapUiPageBG;
+}
+
+.sapMPageBgTransparent {
+	background-color: transparent;
+}
+
+.sapMBar-CTX .sapMBarLeft > .sapMImg.sapMPageAppIcon {
+	height: 2em;
+}
+
+/* vertical scroll bar */
+
+.sapMScrollbarV > div {
+	background-color: fade(@sapUiBlackBG, 50);
+	border-color: fade(@sapUiPageBG, 90);
+}
+
+/* ========== */
+/* Page iOS   */
+/* ========== */
+
+.sap-ios .sapMPageBgList {
+	background-color: @sapUiListDarkBG;
+}
+
+/* page with header or subHeader */
+
+.sap-ios .sapMPageWithHeader > section > .sapMPageScroll,
+.sap-ios .sapMPageWithSubHeader > section > .sapMPageScroll {
+	border-top-width: 2.75em;
+}
+
+.sap-ios.sap-desktop .sapMPageWithHeader > section,
+.sap-ios .sapMPageWithHeader > section > .sapMScrollbarV  {
+	top: 2.75em;
+}
+
+/* page with header and subHeader */
+
+.sap-ios .sapMPageWithHeader.sapMPageWithSubHeader > section > .sapMPageScroll {
+	border-top-width: 5.5em;
+}
+
+.sap-ios.sap-desktop .sapMPageWithHeader.sapMPageWithSubHeader > section,
+.sap-ios .sapMPageWithHeader.sapMPageWithSubHeader > section > .sapMScrollbarV {
+	top: 5.5em;
+}
+
+/* page with footer */
+
+.sap-ios .sapMPageWithFooter > section > .sapMPageScroll {
+	border-bottom-width: 2.75em;
+}
+
+.sap-ios.sap-desktop .sapMPageWithFooter > section,
+.sap-ios .sapMPageWithFooter > section > .sapMScrollbarV {
+	bottom: 2.75em;
+}
+
+/* ============================ */
+/* Page Android and blackberry  */
+/* ============================ */
+
+.sap-android .sapMPageBgList,
+.sap-bb .sapMPageBgList {
+	background-color: @sapUiPageBG;
+}
+
+/* page with header or subHeader */
+
+.sap-android .sapMPageWithHeader > section > .sapMPageScroll,
+.sap-bb .sapMPageWithHeader > section > .sapMPageScroll,
+.sap-android .sapMPageWithSubHeader > section > .sapMPageScroll,
+.sap-bb .sapMPageWithSubHeader > section > .sapMPageScroll {
+	border-top-width: 3em;
+}
+
+.sap-android.sap-desktop .sapMPageWithHeader > section,
+.sap-bb.sap-desktop .sapMPageWithHeader > section,
+.sap-android .sapMPageWithHeader > section > .sapMScrollbarV,
+.sap-bb .sapMPageWithHeader > section > .sapMScrollbarV {
+	top: 3em;
+}
+
+/* page with header and subHeader */
+
+.sap-android .sapMPageWithHeader.sapMPageWithSubHeader > section > .sapMPageScroll,
+.sap-bb .sapMPageWithHeader.sapMPageWithSubHeader > section > .sapMPageScroll {
+	border-top-width: 6em;
+}
+
+.sap-android.sap-desktop .sapMPageWithHeader.sapMPageWithSubHeader > section,
+.sap-bb.sap-desktop .sapMPageWithHeader.sapMPageWithSubHeader > section,
+.sap-android .sapMPageWithHeader.sapMPageWithSubHeader > section > .sapMScrollbarV,
+.sap-bb .sapMPageWithHeader.sapMPageWithSubHeader > section > .sapMScrollbarV {
+	top: 6em;
+}
+
+/* page with footer */
+
+.sap-android .sapMPageWithFooter > section > .sapMPageScroll,
+.sap-bb .sapMPageWithFooter > section > .sapMPageScroll {
+	border-bottom-width: 3em;
+}
+
+.sap-android.sap-desktop .sapMPageWithFooter > section,
+.sap-bb.sap-desktop .sapMPageWithFooter > section,
+.sap-android .sapMPageWithFooter > section > .sapMScrollbarV,
+.sap-bb .sapMPageWithFooter > section > .sapMScrollbarV {
+	bottom: 3em;
+}

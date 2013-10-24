@@ -1,0 +1,104 @@
+/* ============================================= */
+/* CSS for control sap.m/Dialog.control          */
+/* BlueCrystal theme                             */
+/* ============================================= */
+
+.sapMDialog.sapMDialogPhone{
+	opacity: 1;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+	-webkit-transition-property: -webkit-transform;
+	transition-property: transform;
+}
+
+.sapMDialog{
+	font-size: 0.875rem;
+	border-radius: @sapUiPopupBorderRadius;
+	border: @sapUiPopupBorder;
+	-webkit-box-shadow: @sapUiPopupBoxShadow;
+	box-shadow: @sapUiPopupBoxShadow;
+}
+
+.sapMDialog > section{
+	background-color: @sapUiWhite;
+}
+
+.sapMDialog > header.sapMDialogTitle,
+.sapMDialog > header.sapMDialogSubHeader {
+	font-size: 1rem;
+}
+
+.sapMDialog.sapMMessageDialog > header.sapMDialogTitle,
+.sapMDialog > header.sapMDialogSubHeader {
+	background-color: @sapUiWhite;
+}
+
+.sapMDialog > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapMLabel {
+	color: @sapUiLightText;
+	vertical-align: middle;
+}
+
+.sapMDialog > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapMImg {
+	width: 36px;
+	height: 36px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.sapMDialog > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapUiIcon {
+	vertical-align: middle;
+	height: 48px;
+	line-height: 48px;
+	margin-right: 10px;
+	font-size: 20px;
+	color: @sapUiLightIcon;
+}
+
+.sapMDialog > footer.sapMDialogActions {
+	background-color: @sapUiFooterBG;
+	border-top: 1px fade(@sapUiExtraLightBorder, 20%) solid;
+}
+
+.sapMDialog > footer.sapMDialogActions > .sapMDialogAction {
+	border-right: 1px darken(@sapUiFooterBG, 20) solid;
+	box-sizing: border-box;
+	width: 50%;
+}
+
+.sapMDialog > footer.sapMDialogActions > .sapMDialogAction:only-child {
+	width: 100%;
+}
+
+.sapMDialog > footer.sapMDialogActions > .sapMDialogAction:last-child {
+	border-right: none;
+}
+
+.sapMDialog > footer.sapMDialogActions > .sapMDialogAction > button.sapMDialogBtn {
+	width: 100%;
+	color: @sapUiTextInverted;
+	vertical-align: top;
+}
+
+.sapMDialog.sapMDialogWarning > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapUiIcon {
+	color: @sapUiCriticalText;
+}
+
+.sapMDialog.sapMDialogError > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapUiIcon {
+	color: @sapUiNegativeText;
+}
+
+.sapMDialog.sapMDialogSuccess > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapUiIcon  {
+	color: @sapUiPositiveText;
+}
+
+.sapMDialog.sapMDialogWarning > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapMDialogTitle.sapMLabel {
+	color: @sapUiCriticalText;
+}
+
+.sapMDialog.sapMDialogError > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapMDialogTitle.sapMLabel {
+	color: @sapUiNegativeText;
+}
+
+.sapMDialog.sapMDialogSuccess > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapMDialogTitle.sapMLabel {
+	color: @sapUiPositiveText;
+}

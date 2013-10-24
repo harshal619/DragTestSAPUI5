@@ -1,0 +1,43 @@
+/* ============================================= */
+/* CSS for control sap.m/Page.control            */
+/* ============================================= */
+
+.sapMPage,
+.sapMPage > section,
+.sapMPageScroll {
+	width: 100%;
+}
+
+.sapMPage {
+	height: 100%;
+	position: relative;
+}
+
+.sapMPage > section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.sapMPageScroll:not(.sapMPageScrollEnabled) {
+	height: 100%;
+}
+
+.sapMPageScroll {
+	min-height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.sapMPageWithHeader .sapMPageScroll  {
+	border-style: solid;
+	border-color: transparent;
+	border-width: 0;
+}
+
+.sap-desktop .sapMPageWithHeader .sapMPageScroll {
+	border: none;
+}

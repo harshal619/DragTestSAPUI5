@@ -1,0 +1,18 @@
+/* ============================================= */
+/* CSS for control sap.m/TextArea.control        */
+/* BlueCrystal theme                             */
+/* ============================================= */
+
+.sapMInputBase.sapMTextArea{
+	height: auto;
+}
+
+.sapMTextArea > .sapMInputBaseInner{
+	line-height: 1.4;
+	height: auto;
+}
+
+.sapMTextArea > .sapMInputBaseReadonlyInner.sapMInputBaseInner {
+	border: 1px solid @sapUiDarkBorder;
+	background-color: transparent;
+}

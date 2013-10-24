@@ -1,0 +1,8 @@
+.sapMGHLI.sapMLIB.sapMListHdr {
+	background-color: @sapUiGroupHeaderBG;
+	text-transform: none;
+}
+
+.sapMGHLIUpperCase.sapMLIB.sapMListHdr{
+	text-transform: uppercase;	
+}
